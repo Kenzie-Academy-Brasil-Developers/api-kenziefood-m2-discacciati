@@ -1,3 +1,153 @@
+/*--------- Home -------- */
+body{
+    width: 425px;
+}
+.headerVitrine{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
+}
+.nomeDoRestaurante{
+    display: flex;
+    align-items: baseline;
+}
+ul{
+    display: flex;
+    list-style: none;
+    padding: 1px;
+    align-items: center;
+}
+h3{
+    font-size: 28px;
+    padding: 2px;
+}
+h4{
+    font-size: 20px;
+    color: #FF2253;
+    padding: 2px;
+}
+.divBuscar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.inputBuscar{
+    background-color: #E9ECEF;
+    border-radius: 25px;
+    width: 100%;
+    border: 1px solid #E9ECEF;
+    height: 28px;
+}
+.btnPesquisar{
+    border: none;
+    background-color: #f5c3cd;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1;
+    right: 0;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+.categorias{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.listaDeBusca{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-around;
+}
+.liFiltro{
+    display: flex;
+}
+.btn{
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 15px;
+    background-color: #F3EEF5;
+    border: none;
+    font-weight: 500;
+}
+.imgPaes{
+    width: 18px;
+    height: 8px;
+    padding: 0px 10px 0px 5px;
+}
+.imgFrutas{
+    width: 20px;
+    height: 12px;
+}
+.imgBebidas{
+    width: 15px;
+    height: 15px;
+}
+.btnFiltros{
+    display: flex;
+}
+.pesquisarPanificadora{
+    background-color: #FFF7F4;
+
+}
+.pesquisarFrutas{
+    background-color: #FFF1F4;
+}
+.pesquisarBebidas{
+    display: flex;
+    align-items: center;
+}
+.pesquisarTodos{
+    width: 88px;
+    background-color: #FF2253;
+    color: #FFF;
+}
+.mainVitrine{
+    display: flex;
+    padding: 20px;
+}
+.vitrineCardapio{
+    display: flex;
+    width: 100%;
+}
+.vitrineCardapio-produtos{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineCardapio-produtos-listar{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+}
+p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+h2{
+    padding: 5px 0px 0px 0px;
+}
+.preco{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+}
+img{
+    width: 100%;
+    height: 90%;
+}
+
 /*-------------------- Página login.html -------------------- */
 .containerFormLogin{
     width: 80%;
@@ -17,4 +167,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* -------- Media Query -------*/
+@media(min-width: 426px){
+    body{
+        width: 768px;
+    }
+    .listaDeBusca{
+        width: 70%; 
+    }
+    .pesquisarTodos{
+        margin: 0px 0px 0px 20px;
+    }
+    .mainVitrine{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+    }
+    .vitrineCardapio{
+        width: 70%;
+    }
+    .vitrineCardapio-produtos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+    }
+    .vitrineCardapio-produtos-listar{
+        padding: 5px;
+        width: 40%;
+        display: flex;
+    }
+    .headerCarrinho{
+        width: 100%;
+        color: #FFF;
+        background-color: #FF2253;
+        border-radius: 15px;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+
+    .vitrineCarrinho{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

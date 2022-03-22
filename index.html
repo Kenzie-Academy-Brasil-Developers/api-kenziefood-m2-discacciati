@@ -4,12 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
-    <title>Kenzie Food</title>
 </head>
 <body>
+    <header class="headerVitrine">
+        <div class="nomeDoRestaurante">
+            <p><h3>Kenzie</h3> <h4>food</h4></p> 
+        </div>
+        <div class="divBuscar">
+            <input class="inputBuscar" type="search" placeholder="pesquisar por produto">
+            <button class="btnPesquisar" type="submit">&#128269;</button>
+            <!-- <img src="lupinha.png" alt="imagem de uma lupa no campo de busca."> -->
+        </div>
+    </header>
+    <nav class="categorias">
+        <ul class="listaDeBusca">
+            <li><button class="btn pesquisarTodos" name="Todos">Todos</button></li>
+            <li class="liFiltro"><button class="btn pesquisarPanificadora"><img class="imgPaes" src="./src/img/pao1.jpg" alt="">Panificadora</button></li>
+            <li class="liFiltro"><button class="btn pesquisarFrutas"> <img class="imgFrutas" src="./src/img/frutas.png" alt=""> Frutas</button></li>
+            <li class="liFiltro"><button class="btn pesquisarBebidas"> <img class="imgBebidas" src="./src/img/vinho1.jpg" alt=""> Bebidas</button></li>
+        </ul>
+        <div>
+            <!-- <button class="adicionarProduto"></button> -->
+        </div>
+    </nav>
 
-    <script type ="module" src="./src/js/controllers/script.js"></script>
+    <main class="mainVitrine">
+        <section class="vitrineCardapio">
+            <ul class="vitrineCardapio-produtos">
+                <li class="vitrineCardapio-produtos-listar">
+                    <img src="./src/img/hamburguer.jpg" alt="">
+                    <h2>Hamburguer Artesanal</h2>
+                    <p>um delicioso hamburguer com queijo e bacon acompanhado
+                       de batatas fritas e maionese caseira</p>
+                    <span class="preco">R$: 29,90</span> 
+                </li>
+                <li class="vitrineCardapio-produtos-listar">
+                    <img src="./src/img/hamburguer.jpg" alt="">
+                    <h2>Hamburguer Artesanal</h2>
+                    <p>um delicioso hamburguer com queijo e bacon acompanhado
+                       de batatas fritas e maionese caseira</p>
+                    <span class="preco">R$: 29,90</span> 
+                </li>
+                <li class="vitrineCardapio-produtos-listar">
+                    <img src="./src/img/hamburguer.jpg" alt="">
+                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                    <p>um delicioso hamburguer com queijo e bacon acompanhado
+                       de batatas fritas e maionese caseira</p>
+                    <span class="preco">R$: 29,90</span> 
+                </li>
+                <li class="vitrineCardapio-produtos-listar">
+                    <img src="./src/img/hamburguer.jpg" alt="">
+                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                    <p>um delicioso hamburguer com queijo e bacon acompanhado
+                       de batatas fritas e maionese caseira</p>
+                    <span class="preco">R$: 29,90</span> 
+                </li>
+                <li class="vitrineCardapio-produtos-listar">
+                    <img src="./src/img/hamburguer.jpg" alt="">
+                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                    <p>um delicioso hamburguer com queijo e bacon acompanhado
+                       de batatas fritas e maionese caseira</p>
+                    <span class="preco">R$: 29,90</span> 
+                </li>
+            </ul>
+        </section>
+        <aside>
+            <header class="headerCarrinho">
+                <h3>Carrinho</h3>
+            </header>
+            <section class="vitrineCarrinho">
+                <ul class="vitrineCardapio-produtos vitrineCarrinho" >
+                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
+                        <li class="vitrineCardapio-produtos-listar">
+                            <img src="./src/img/hamburguer.jpg" alt="">
+                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                            <p>um delicioso hamburguer com queijo e bacon acompanhado
+                               de batatas fritas e maionese caseira</p>
+                            <span class="preco">R$: 29,90</span> 
+                        </li>
+                    </li>
+                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
+                        <li class="vitrineCardapio-produtos-listar">
+                            <img src="./src/img/hamburguer.jpg" alt="">
+                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                            <p>um delicioso hamburguer com queijo e bacon acompanhado
+                               de batatas fritas e maionese caseira</p>
+                            <span class="preco">R$: 29,90</span> 
+                        </li>
+                    </li>
+                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
+                        <li class="vitrineCardapio-produtos-listar">
+                            <img src="./src/img/hamburguer.jpg" alt="">
+                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
+                            <p>um delicioso hamburguer com queijo e bacon acompanhado
+                               de batatas fritas e maionese caseira</p>
+                            <span class="preco">R$: 29,90</span> 
+                        </li>
+                    </li>
+                </ul>
+
+            </section>
+        </aside>
+    </main>
 </body>
 </html>
