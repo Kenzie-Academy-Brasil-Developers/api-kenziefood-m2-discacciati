@@ -1,4 +1,6 @@
 import { API } from "../model/api.js";
+import { CardProduto } from "../model/cards.js"
+import { CardCarrinho } from "../model/cart.js"
 
 
 const testeUser = {
@@ -11,3 +13,12 @@ console.log(respostaAutenticaçao)
 
 const listaProdutosPubli = await API.listarProdutosPublico()
 console.log(listaProdutosPubli)
+
+const ulCardapio = document.querySelector(".vitrineCardapio-produtos")
+
+listaProdutosPubli.forEach((elemento) => {
+    const liProduto = new CardProduto(elemento.imagem, elemento.categoria, 
+    elemento.nome, elemento.descricao, elemento.preco, elemento.id)
+    liProduto.criarTemplate(ulCardapio)
+})
+

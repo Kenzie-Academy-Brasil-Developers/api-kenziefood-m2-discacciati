@@ -117,7 +117,31 @@ h4{
 }
 .vitrineCardapio{
     display: flex;
+    width: 70%;
+}
+.divPreco{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    width: 30%;
+}
+.headerCarrinho{
+    width: 100%;
+    color: #FFF;
+    background-color: #FF2253;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 5px;
+}
+.headerCarrinho > h3{
+    font-size: 16px;
+}
+.carrinhoListar{
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
 }
 .vitrineCardapio-produtos{
     display: flex;
@@ -135,7 +159,7 @@ p{
     padding: 5px 0px 5px 0px;
     font-size: 14px;
 }
-h2{
+.h2Cardapio{
     padding: 5px 0px 0px 0px;
 }
 .preco{
@@ -143,9 +167,30 @@ h2{
     justify-content: flex-start;
     padding: 2px;
 }
-img{
+.imgCardapio{
     width: 100%;
     height: 90%;
+}
+.imgHeader{
+    width: 50%;
+    padding-left: 20px;
+}
+.imgCarrinho{
+    width: 40%;
+}
+.carrinhoListar > h2, .preco{
+    font-size: 12px;
+}
+.carrinhoListar > p{
+    font-size: 10px;
+}
+.imgCart{
+    width: 10px;
+    height: 10px;
+}
+.btnAddCarrinho{
+    border: none;
+    border-radius: 25px;
 }
 
 /*-------------------- Página login.html -------------------- */
@@ -189,7 +234,9 @@ img{
         width: 70%;
     }
     .vitrineCardapio-produtos{
+        display: flex;
         flex-direction: row;
+        align-content:flex-start;
         flex-wrap: wrap;
         justify-content:flex-start;
     }
@@ -198,22 +245,31 @@ img{
         width: 40%;
         display: flex;
     }
-    .headerCarrinho{
-        width: 100%;
-        color: #FFF;
-        background-color: #FF2253;
-        border-radius: 15px;
-    }
     aside{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 30%;
     }
-
     .vitrineCarrinho{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    @media(min-width: 769px){
+        body{
+            width: 100%;
+        }
+
+        .categorias{
+            width: 60%;
+        }
+        .vitrineCarrinho{
+            display: flex;
+        }
+        .vitrineCardapio-produtos-listar{
+            width: 40%;
+        }
     }
 }
