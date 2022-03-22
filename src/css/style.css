@@ -1,0 +1,20 @@
+/*-------------------- Página login.html -------------------- */
+.containerFormLogin{
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    margin-top: 12vh;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.tituloLogin{
+    text-align: center;
+}
+
+.formularioLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
