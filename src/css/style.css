@@ -280,3 +280,16 @@ p{
         }
     }
 }
+
+.btnLogin{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
