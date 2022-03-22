@@ -15,10 +15,17 @@ const listaProdutosPubli = await API.listarProdutosPublico()
 console.log(listaProdutosPubli)
 
 const ulCardapio = document.querySelector(".vitrineCardapio-produtos")
+const ulCarrinho = document.querySelector(".vitrineCarrinho")
 
+//Listando Produtos no cardapio//
 listaProdutosPubli.forEach((elemento) => {
     const liProduto = new CardProduto(elemento.imagem, elemento.categoria, 
     elemento.nome, elemento.descricao, elemento.preco, elemento.id)
     liProduto.criarTemplate(ulCardapio)
 })
+
+//Listando Produtos no carrinho//
+
+
+export { listaProdutosPubli }
 

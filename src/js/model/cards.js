@@ -1,3 +1,9 @@
+import{ listaProdutosPubli } from "../controllers/script.js"
+import{ CardCarrinho } from "./cart.js"
+
+const ulCarrinho = document.querySelector(".vitrineCarrinho")
+let produto = []
+
 export class CardProduto{
     constructor(imgUrl, categoria, nomeProduto, descricao, preco, idProduto){
         this.imgUrl      = imgUrl
@@ -18,17 +24,28 @@ export class CardProduto{
                 <h2 class="h2Cardapio">${this.nomeProduto}</h2>
                 <p>${this.descricao}</p>
                 <div class="divPreco">
-                    <span class="preco">${this.preco}</span> 
+                    <span class="preco">R$: ${this.preco.toFixed(2)}</span> 
                     <button class="btnAddCarrinho"><img class="imgCart" src="./src/img/carrinho1.png" alt=""></button>
                 </div>
-        `
+        `;
         elementoPai.appendChild(this.liCardapio)
     }
 
     handleEvent(){
-        console.log(this.idProduto)
+        ulCarrinho.innerHTML = ""
+        produto.push(listaProdutosPubli.filter((elemento) => {
+            return elemento.id === this.idProduto   
+        })[0])
+        produto.forEach((elemento)=>{
+            if(elemento.id == elemento.id){
+                const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco)
+                liCarrinho.templateCarrinho(ulCarrinho)
+            }
+        })
+        console.log(produto)
     }
 }
+
 
 
 
