@@ -1,4 +1,4 @@
-/*-------------------- Página login.html -------------------- */
+/* -------------------- Página login.html -------------------- */
 .containerFormLogin{
     width: 80%;
     margin: auto;
@@ -14,6 +14,26 @@
 }
 
 .formularioLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* -------------------- Página registro.html -------------------- */ 
+.containerFormCadastro{
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    margin-top: 12vh;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.tituloCadastro{
+    text-align: center;
+}
+
+.formularioCadastro{
     display: flex;
     flex-direction: column;
     align-items: center;
