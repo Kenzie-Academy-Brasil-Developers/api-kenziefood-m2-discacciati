@@ -11,13 +11,15 @@
 <body>
     <header class="headerVitrine">
         <div class="nomeDoRestaurante">
-            <p><h3>Kenzie</h3> <h4>food</h4></p> 
+            <img class="imgHeader" src="./src/img/headerKenzie.png" alt="">
         </div>
         <div class="divBuscar">
             <input class="inputBuscar" type="search" placeholder="pesquisar por produto">
             <button class="btnPesquisar" type="submit">&#128269;</button>
             <!-- <img src="lupinha.png" alt="imagem de uma lupa no campo de busca."> -->
         </div>
+
+        <button class="btnLogin">Entrar</button>
     </header>
     <nav class="categorias">
         <ul class="listaDeBusca">
@@ -33,81 +35,26 @@
 
     <main class="mainVitrine">
         <section class="vitrineCardapio">
-            <ul class="vitrineCardapio-produtos">
-                <li class="vitrineCardapio-produtos-listar">
-                    <img src="./src/img/hamburguer.jpg" alt="">
-                    <h2>Hamburguer Artesanal</h2>
-                    <p>um delicioso hamburguer com queijo e bacon acompanhado
-                       de batatas fritas e maionese caseira</p>
-                    <span class="preco">R$: 29,90</span> 
-                </li>
-                <li class="vitrineCardapio-produtos-listar">
-                    <img src="./src/img/hamburguer.jpg" alt="">
-                    <h2>Hamburguer Artesanal</h2>
-                    <p>um delicioso hamburguer com queijo e bacon acompanhado
-                       de batatas fritas e maionese caseira</p>
-                    <span class="preco">R$: 29,90</span> 
-                </li>
-                <li class="vitrineCardapio-produtos-listar">
-                    <img src="./src/img/hamburguer.jpg" alt="">
-                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                    <p>um delicioso hamburguer com queijo e bacon acompanhado
-                       de batatas fritas e maionese caseira</p>
-                    <span class="preco">R$: 29,90</span> 
-                </li>
-                <li class="vitrineCardapio-produtos-listar">
-                    <img src="./src/img/hamburguer.jpg" alt="">
-                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                    <p>um delicioso hamburguer com queijo e bacon acompanhado
-                       de batatas fritas e maionese caseira</p>
-                    <span class="preco">R$: 29,90</span> 
-                </li>
-                <li class="vitrineCardapio-produtos-listar">
-                    <img src="./src/img/hamburguer.jpg" alt="">
-                    <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                    <p>um delicioso hamburguer com queijo e bacon acompanhado
-                       de batatas fritas e maionese caseira</p>
-                    <span class="preco">R$: 29,90</span> 
-                </li>
-            </ul>
+            <ul class="vitrineCardapio-produtos"> </ul>
+                
         </section>
-        <aside>
+        <aside class="asideCarrinho">
             <header class="headerCarrinho">
                 <h3>Carrinho</h3>
             </header>
             <section class="vitrineCarrinho">
-                <ul class="vitrineCardapio-produtos vitrineCarrinho" >
-                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
-                        <li class="vitrineCardapio-produtos-listar">
-                            <img src="./src/img/hamburguer.jpg" alt="">
-                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                            <p>um delicioso hamburguer com queijo e bacon acompanhado
-                               de batatas fritas e maionese caseira</p>
-                            <span class="preco">R$: 29,90</span> 
-                        </li>
-                    </li>
-                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
-                        <li class="vitrineCardapio-produtos-listar">
-                            <img src="./src/img/hamburguer.jpg" alt="">
-                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                            <p>um delicioso hamburguer com queijo e bacon acompanhado
-                               de batatas fritas e maionese caseira</p>
-                            <span class="preco">R$: 29,90</span> 
-                        </li>
-                    </li>
-                    <li class="vitrineCardapio-produtos-listar carrinhoListar">
-                        <li class="vitrineCardapio-produtos-listar">
-                            <img src="./src/img/hamburguer.jpg" alt="">
-                            <h2 class="nomeDoPrato">Hamburguer Artesanal</h2>
-                            <p>um delicioso hamburguer com queijo e bacon acompanhado
-                               de batatas fritas e maionese caseira</p>
-                            <span class="preco">R$: 29,90</span> 
-                        </li>
-                    </li>
-                </ul>
+                <ul class="vitrineCarrinho-Listar" ></ul>
 
+                
             </section>
+            <div class="divQuantidadeCarrinho">
+                
+            </div>
+            <div class="divTotalCarrinho">
+                
+            </div>
         </aside>
     </main>
+    <script type="module" src="./src/js/controllers/script.js" ></script>
 </body>
 </html>
