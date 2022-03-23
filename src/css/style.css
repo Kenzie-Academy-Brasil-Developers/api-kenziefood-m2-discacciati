@@ -233,6 +233,8 @@ h4{
 
 button:hover{
     cursor: pointer;
+}
+
 
 /*-------------------- Página login.html -------------------- */
 .containerFormLogin{
@@ -354,7 +356,6 @@ button:hover{
     border-radius: 0px 0px 12px 12px;
 }
 
-
 /* -------------------- Página registro.html -------------------- */ 
 .containerFormCadastro {
     width: 80%;
@@ -439,6 +440,80 @@ button:hover{
     background-color: #39DF8F;
     border-radius: 0px 0px 12px 12px;
 }
+
+
+/* ---------------- Página Adm ----------------*/
+
+.mainAdm{
+    display: flex;
+    padding: 20px;
+}
+.vitrineAdm{
+    display: flex;
+    width: 90%;
+}
+.vitrineAdm-produtos{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineAdm-produtos-listar{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+.h2Adm{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0px 0px 0px;
+    color: #212529;
+}
+.imgAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+.divCategoriaAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+.divCategoriaAdmBtn{
+    width: 93px;
+    height: 27px;
+    background: #F8F9FA;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #868E96;
+}
+.descricaoAdm{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+.btnEditarExcluirAdm{
+    border: none;
+    border-radius: 25px;
+
+}
+
 
 
 /* -------- Media Query -------*/
