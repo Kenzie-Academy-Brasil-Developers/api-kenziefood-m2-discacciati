@@ -1,23 +1,35 @@
-const formLogin = document.querySelector(".formularioLogin")
+import { API } from "../model/api.js"
 
-formLogin.addEventListener("submit", (e) => {
+const formLogin       = document.querySelector(".formularioLogin")
+const modalLogin      = document.querySelector(".modalErroLogin")
+const botaoModalLogin = document.querySelector(".botaoModalErroLogin")
+
+formLogin.addEventListener("submit", async function(e) {
+    
     e.preventDefault()
-    const infoInput = {
+
+    const infoInputLogin = {
         "email": formLogin.userLogin.value,
         "password": formLogin.senhaLogin.value
     }
 
-    fetch("https://kenzie-food-api.herokuapp.com/auth/login", 
-    {
-        method:"POST",
-        headers:{
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(infoInput)
-    })
-    .then((response) => response.json())
-    .then((res) => {
-        location.assign("./../../../index.html")
-        console.log(res)
-    })
+    const loginUser = await API.autenticarUsuario(infoInputLogin)
+
+    if(loginUser.status === "Error"){
+
+        modalLogin.style.display = "flex"
+        botaoModalLogin.addEventListener("click", ()=> {
+            modalLogin.style.display = "none"
+            location.reload()
+        })
+
+    }else{
+
+        localStorage.setItem("tokenKF-G1Pedro", loginUser)
+        location.assign("./adm.html")
+
+    }
+
+    console.log(loginUser)
+
 })
