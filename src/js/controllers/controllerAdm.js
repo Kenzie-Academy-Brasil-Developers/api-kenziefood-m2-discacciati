@@ -78,6 +78,7 @@ filtros.addEventListener('click', (event)=>{
             const trProduto = new Adm(elemento.imagem, elemento.categoria, 
             elemento.nome, elemento.descricao, elemento.id)
             trProduto.criarTemplate(tableVitrineAdm)
+
         })
     }
     else{
