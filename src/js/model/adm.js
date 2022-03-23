@@ -26,8 +26,8 @@ export class Adm {
                 <p class="block-with-text">${this.descricao}</p>
                 </td>
                 <td class="vitrineAdm-produtos-listar-td-5"class="divAcaoAdm">
-                   <button class="btnEditarExcluirAdm">Ed</button>
-                   <button class="btnEditarExcluirAdm">Ex</button>
+                   <button class="btnEditarExcluirAdm"><img class="imgAdmAcao" src="../img/lapisEditar.png"></button>
+                   <button class="btnEditarExcluirAdm"><img class="imgAdmAcao" src="../img/lixoDelete.png"></button>
                 </td>
         `
         elementoPai.appendChild(this.trAdm)

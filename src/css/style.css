@@ -563,6 +563,11 @@ p{
     line-height: 14px;
     color: #868E96;
 }
+.imgAdmAcao{
+    height: 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
