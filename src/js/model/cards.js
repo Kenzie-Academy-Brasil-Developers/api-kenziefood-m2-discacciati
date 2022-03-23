@@ -67,7 +67,33 @@ export class CardProduto{
         // return totalProdutos.innerHTML = somaProdutos
         
     }
+
+    static filtrarPorBusca(valor, listaFonte){
+        
+        let valorMinusculo = valor.toLowerCase()
+
+        let arrayResult = listaFonte.filter((elemento) =>{
+
+            let categoriaFormatada = elemento.categoria.toLowerCase()
+            let descricaoFormatada = elemento.descricao.toLowerCase()
+            let nomeFormatado      = elemento.nome.toLowerCase()
+
+            if(categoriaFormatada.includes(valorMinusculo) || descricaoFormatada.includes(valorMinusculo) || nomeFormatado.includes(valorMinusculo)){
+                return elemento
+            }
+        })
+
+        return arrayResult
+    }
+
+    static filtrarPorCategoria(categoria, listaFonte){
+
+        let arrayResult = listaFonte.filter(value=>value.categoria === categoria)
+
+        return arrayResult        
+    }
 }
+
 
 
 
@@ -82,4 +108,4 @@ export class CardProduto{
 //                         <span class="preco">R$: 29,90</span> 
 //                         <button class="btnAddCarrinho"><img class="imgCart" src="./src/img/carrinho1.png" alt=""></button>
 //                     </div>
-//                 </li> 
+//                 </li>
