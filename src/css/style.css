@@ -116,6 +116,22 @@ h4{
     background-color: #FF2253;
     color: #FFF;
 }
+.adicionarProduto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    background-color: #FF2253;
+}
+.btn-p-adicionarProduto{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #F8F9FA;
+}
+
 .mainVitrine{
     display: flex;
     padding: 20px;
@@ -230,6 +246,17 @@ h4{
     background: #FF2253;
     color: white;
 }
+
+.btnLogout{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+
 
 button:hover{
     cursor: pointer;
@@ -469,10 +496,17 @@ button:hover{
 .mainAdm{
     display: flex;
     padding: 20px;
+    margin: 0 auto;
 }
 .vitrineAdm{
     display: flex;
+    flex-direction: column;
     width: 90%;
+    margin: 0 auto;
+}
+.vitrineAdm-produtos-header{
+    display: flex;
+    flex-direction: column;
 }
 .vitrineAdm-produtos{
     display: flex;
@@ -480,11 +514,40 @@ button:hover{
 }
 .vitrineAdm-produtos-listar{
     display: flex;
-    width: 90%;
+    width: 100%;
+    height: 62px;
     flex-direction: row;
-    align-items: flex-start;
-    margin: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid #E9ECEF;  
+    box-sizing: border-box;
+    border-radius: 12px;
 }
+.vitrineAdm-produtos-listar-header{
+    display: flex;
+    width: 98%;
+    height: 62px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+
+.vitrineAdm-produtos-listar-td{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
 p{
     color: #868E96;
     padding: 5px 0px 5px 0px;
@@ -514,6 +577,7 @@ p{
     width: 93px;
     height: 27px;
     background: #F8F9FA;
+    border: none;
     border-radius: 8px;
     font-family: 'Poppins';
     font-style: normal;
@@ -522,21 +586,45 @@ p{
     line-height: 21px;
     color: #868E96;
 }
-.descricaoAdm{
+.block-with-text{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #868E96;
+
+    white-space: nowrap;
+    width: 25em;
+    overflow: hidden;
+    text-overflow: ellipsis;     
+    text-align: justify;
+}
+
+.divAcaoAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
 }
 .btnEditarExcluirAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
     border: none;
-    border-radius: 25px;
-
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
 }
-
-
+.imgAdmAcao{
+    height: 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
