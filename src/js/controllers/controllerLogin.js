@@ -14,8 +14,11 @@ formLogin.addEventListener("submit", async function(e) {
     }
 
     const loginUser = await API.autenticarUsuario(infoInputLogin)
+    console.log(loginUser)
 
-    if(loginUser.statusText === "Not Found"){
+
+    if(loginUser.status == 401 || loginUser.status == 404){
+
 
         modalLogin.style.display = "flex"
         botaoModalLogin.addEventListener("click", ()=> {
@@ -29,7 +32,5 @@ formLogin.addEventListener("submit", async function(e) {
         location.assign("./adm.html")
 
     }
-
-    console.log(loginUser)
 
 })

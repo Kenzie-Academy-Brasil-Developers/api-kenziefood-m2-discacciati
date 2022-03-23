@@ -17,7 +17,7 @@ export class API{
             "body": JSON.stringify(dados)
         })    
 
-        return response.json()
+        return response
     }
 
     static async autenticarUsuario(dados){
