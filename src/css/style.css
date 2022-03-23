@@ -247,9 +247,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloLogin {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -260,14 +265,14 @@ button:hover{
 .formularioLogin {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioLogin>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -282,6 +287,7 @@ button:hover{
 .formularioLogin>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -294,6 +300,11 @@ button:hover{
     line-height: 19px;
 }
 
+.cadastroLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 
 /*Modais*/
 .modalErroLogin {
@@ -301,7 +312,7 @@ button:hover{
     width: 90%;
     height: 10%;
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 5%;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -333,7 +344,7 @@ button:hover{
     border: 1.5px solid #E9ECEF;
     margin-right: 15px;
 
-    font-family: 'Nunito';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -359,7 +370,7 @@ button:hover{
 /* -------------------- Página registro.html -------------------- */ 
 .containerFormCadastro {
     width: 80%;
-    margin-left: 18px;
+    margin: auto;
     height: 70vh;
     margin-top: 8vh;
     border-radius: 8px;
@@ -367,9 +378,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloCadastro {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -380,14 +396,14 @@ button:hover{
 .formularioCadastro {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioCadastro>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -402,6 +418,7 @@ button:hover{
 .formularioCadastro>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -412,6 +429,11 @@ button:hover{
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+}
+
+.loginCadastro {
+    width: 80%;
+    margin-left: 10%;
 }
 
 /*Modais*/
@@ -561,6 +583,29 @@ p{
     .vitrineCarrinho-Listar{
         display: flex;
     }
+    /*--- Login.html ---*/
+    .containerFormLogin {
+        width: 45%;       
+    }
+    .modalErroLogin {
+        width: 50%;
+        top: 35%;
+        left: 25%; 
+    }
+    /*--- Registro.html ---*/
+    .containerFormCadastro {
+        width: 45%;
+    }
+    .modalErroCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
+    .modalConfirmacaoCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
 
 }
     @media(min-width: 769px){
@@ -576,6 +621,29 @@ p{
         }
         .vitrineCardapio-produtos-listar{
             width: 40%;
+        }
+        /*--- Login.html ---*/
+        .containerFormLogin {
+            width: 35%;       
+        }
+        .modalErroLogin {
+            width: 45%;
+            top: 35%;
+            left: 27.5%; 
+        }
+        /*--- Registro.html ---*/
+        .containerFormCadastro {
+            width: 35%;
+        }
+        .modalErroCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
+        }
+        .modalConfirmacaoCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
         }
    }
 
