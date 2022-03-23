@@ -16,18 +16,23 @@ export class CardCarrinho{
     templateCarrinho(elementoPai){
             this.liCarrinho.innerHTML = `
             <img class="imgCarrinho" src="${this.imgUrl}" alt="">
-            <h2 class="h2Cardapio">${this.nomeProduto}</h2>
-            <p>${this.categoria}</p>
-            <span class="preco">R$: ${this.preco.toFixed(2)}</span>
+            <div class="divFormatacaoCarrinho">
+                <h2 class="h2Cardapio">${this.nomeProduto} <button class="botaoExcluirCarrinho"></button></h2>
+            </div>    
+            <div class="divFormatacaoCarrinho">
+                <p>${this.categoria}</p>
+            </div>   
+            <div class="divFormatacaoCarrinho">  
+                <span class="preco">R$: ${this.preco.toFixed(2)}</span>
+            </div> 
             `;
             elementoPai.appendChild(this.liCarrinho)
     }
 
     handleEvent(){
-        let produto = listaProdutosPubli.filter((elemento) => {
-            elemento.id == this.idProduto
-        })
+        // let produto = listaProdutosPubli.filter((elemento) => {
+        //     elemento.id == this.idProduto
+        // })
 
-        console.log(produto)
     }
 }

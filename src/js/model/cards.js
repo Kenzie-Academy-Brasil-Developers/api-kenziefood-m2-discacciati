@@ -1,7 +1,10 @@
 import{ listaProdutosPubli } from "../controllers/script.js"
 import{ CardCarrinho } from "./cart.js"
 
-const ulCarrinho = document.querySelector(".vitrineCarrinho")
+const qtdCarrinho = document.querySelector(".divQuantidadeCarrinho")
+const ulCarrinho = document.querySelector(".vitrineCarrinho-Listar")
+const totalProdutos = document.querySelector(".divTotalCarrinho")
+
 let produto = []
 
 export class CardProduto{
@@ -42,7 +45,27 @@ export class CardProduto{
                 liCarrinho.templateCarrinho(ulCarrinho)
             }
         })
+        this.quantidadeCarrinho()
+        this.somaTotal()
+    }
+    quantidadeCarrinho(){
         console.log(produto)
+        
+        return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
+    }
+    somaTotal(){
+
+        let soma = 0
+        produto.map((elemento) =>{
+            soma += elemento.preco
+            console.log(soma)
+            return  totalProdutos.innerHTML = `Total R$:  ${soma.toFixed(2)}`  
+        })
+
+
+
+        // return totalProdutos.innerHTML = somaProdutos
+        
     }
 }
 
