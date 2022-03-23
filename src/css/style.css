@@ -222,6 +222,20 @@ h4{
     height: 25px;
 }
 
+.btnLogin{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
 /*-------------------- Página login.html -------------------- */
 .containerFormLogin{
     width: 80%;
@@ -233,15 +247,274 @@ h4{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
-.tituloLogin{
+.tituloLogin {
     text-align: center;
+    padding-top: 25%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 20px;
 }
 
-.formularioLogin{
+.formularioLogin {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    height: 80%;
 }
+
+.formularioLogin>input {
+    width: 70%;
+    height: 10%;
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 12px;
+
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.formularioLogin>button {
+    width: 70%;
+    height: 10%;
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    border-radius: 12px;
+
+    color: #F8F9FA;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+/*Modais*/
+.modalErroLogin {
+    display: none;
+    width: 90%;
+    height: 10%;
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.containerModalContent {
+    width: 100%;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+    background-color: #F8F9FA;
+    border-radius: 12px 12px 0px 0px;
+}
+.modalHeader>h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 15px;
+}
+.modalHeader>button {
+    background-color: #E9ECEF;
+    border-radius: 4px;
+    border: 1.5px solid #E9ECEF;
+    margin-right: 15px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+}
+
+.modalContent>p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+    margin-left: 20px;
+}
+.modalErroFooter {
+    height: 10%;
+    background-color: #FF2253;
+    border-radius: 0px 0px 12px 12px;
+}
+
+/* -------------------- Página registro.html -------------------- */ 
+.containerFormCadastro {
+    width: 80%;
+    margin-left: 18px;
+    height: 70vh;
+    margin-top: 8vh;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.tituloCadastro {
+    text-align: center;
+    padding-top: 25%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.formularioCadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+}
+
+.formularioCadastro>input {
+    width: 70%;
+    height: 10%;
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 12px;
+
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.formularioCadastro>button {
+    width: 70%;
+    height: 10%;
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    border-radius: 12px;
+
+    color: #F8F9FA;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/*Modais*/
+.modalErroCadastro {
+    display: none;
+    width: 85%;
+    height: 10%;
+    position: fixed;
+    top: 25%;
+    left: 1%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+.modalConfirmacaoCadastro {
+    display: none;
+    width: 85%;
+    height: 10%;
+    position: fixed;
+    top: 25%;
+    left: 1%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+.modalConfirmaFooter {
+    height: 10%;
+    background-color: #39DF8F;
+    border-radius: 0px 0px 12px 12px;
+}
+
+
+/* ---------------- Página Adm ----------------*/
+
+.mainAdm{
+    display: flex;
+    padding: 20px;
+}
+.vitrineAdm{
+    display: flex;
+    width: 90%;
+}
+.vitrineAdm-produtos{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineAdm-produtos-listar{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+.h2Adm{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0px 0px 0px;
+    color: #212529;
+}
+.imgAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+.divCategoriaAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+.divCategoriaAdmBtn{
+    width: 93px;
+    height: 27px;
+    background: #F8F9FA;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #868E96;
+}
+.descricaoAdm{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+.btnEditarExcluirAdm{
+    border: none;
+    border-radius: 25px;
+
+}
+
+
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
@@ -289,6 +562,7 @@ h4{
         display: flex;
     }
 
+}
     @media(min-width: 769px){
         body{
             width: 100%;
@@ -303,5 +577,5 @@ h4{
         .vitrineCardapio-produtos-listar{
             width: 40%;
         }
-    }
-}
+   }
+

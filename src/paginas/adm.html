@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Food</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="headerVitrine">
+        <div class="nomeDoRestaurante">
+            <img class="imgHeader" src="../img/headerKenzie.png" alt="">
+        </div>
+        <div class="divBuscar">
+            <input class="inputBuscar" type="search" placeholder="pesquisar por produto">
+            <button class="btnPesquisar" type="submit">&#128269;</button>
+            <!-- <img src="lupinha.png" alt="imagem de uma lupa no campo de busca."> -->
+        </div>
+    </header>
+    <nav class="categorias">
+        <ul class="listaDeBusca">
+            <li><button class="btn pesquisarTodos" name="Todos">Todos</button></li>
+            <li class="liFiltro"><button class="btn pesquisarPanificadora"><img class="imgPaes" src="../img/pao1.jpg" alt="">Panificadora</button></li>
+            <li class="liFiltro"><button class="btn pesquisarFrutas"> <img class="imgFrutas" src="../img/frutas.png" alt=""> Frutas</button></li>
+            <li class="liFiltro"><button class="btn pesquisarBebidas"> <img class="imgBebidas" src="../img/vinho1.jpg" alt=""> Bebidas</button></li>
+        </ul>
+        <div>
+            <!-- <button class="adicionarProduto"></button> -->
+        </div>
+    </nav>
+
+    <main class="mainAdm">
+        <section class="vitrineAdm">
+            <ul class="vitrineAdm-produtos">
+                
+            </ul>
+        </section>
+
+    </main>
+    <script type="module" src="../js/controllers/controllerAdm.js" ></script>
+</body>
+</html>

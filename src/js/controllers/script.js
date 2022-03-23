@@ -3,6 +3,30 @@ import { CardProduto } from "../model/cards.js"
 import { CardCarrinho } from "../model/cart.js"
 
 
+//---------------Botão de Login-----------
+
+const login = document.querySelector('.btnLogin')
+
+if(localStorage.getItem('tokenKF-G1Pedro')){
+    API.infoUsuario.token = localStorage.getItem('tokenKF-G1Pedro')
+    login.innerText = "Editar"
+    login.style.backgroundColor = "green"
+}
+
+login.addEventListener('click',()=>{
+    if(login.innerText === 'Entrar'){
+        window.location.href = "./src/paginas/login.html"
+    }
+    else{
+        window.location.href = "./src/paginas/adm.html"
+    }
+})
+
+//---------------------------------------------
+
+
+
+
 const testeUser = {
     email: 'teste77@email.com',
     password: 2022

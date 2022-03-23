@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>KenzieFood Login</title>
+
 </head>
 <body>
+
+  <div class="modalErroLogin">
+  
+    <div class="containerModalContent">
+      
+      <div class="modalHeader">
+        <h2>Status</h2>
+        <button class="botaoModalErroLogin">X</button>
+      </div>
+
+      <div class="modalContent">
+        <p>Usuário e senha não existem.</p>
+      </div>
+
+      <div class="modalErroFooter"></div>
+
+    </div>  
+  
+  </div>
 
   <section class="containerFormLogin">
 
@@ -24,6 +44,7 @@
 
   </section>
 
-  <script src="../js/controllers/controllerLogin.js"></script>
+
+  <script type="module" src="../js/controllers/controllerLogin.js"></script>
 </body>
 </html>
