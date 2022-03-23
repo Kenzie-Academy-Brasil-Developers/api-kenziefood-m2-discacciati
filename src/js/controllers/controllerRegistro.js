@@ -17,10 +17,12 @@ formCadastro.addEventListener("submit", async function (e){
     }
     
     const criarUser = await API.criarUsuario(infoInputCadastro)
-    
-    if(criarUser.status === "Error"){
+    console.log(criarUser)
+
+    if(criarUser.statusText === "Conflict"){
         
         modalErroCadastro.style.display = "flex"
+        
 
         botaoModalErroCadastro.addEventListener("click", () => {
             modalErroCadastro.style.display = "none"
