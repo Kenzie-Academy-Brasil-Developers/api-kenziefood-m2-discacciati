@@ -233,8 +233,8 @@ h4{
 
 button:hover{
     cursor: pointer;
-
 }
+
 
 /*-------------------- Página login.html -------------------- */
 .containerFormLogin{
@@ -356,7 +356,6 @@ button:hover{
     border-radius: 0px 0px 12px 12px;
 }
 
-
 /* -------------------- Página registro.html -------------------- */ 
 .containerFormCadastro {
     width: 80%;
@@ -441,6 +440,7 @@ button:hover{
     background-color: #39DF8F;
     border-radius: 0px 0px 12px 12px;
 }
+
 
 /* ---------------- Página Adm ----------------*/
 

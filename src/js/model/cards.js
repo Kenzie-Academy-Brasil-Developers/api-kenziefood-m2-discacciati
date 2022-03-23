@@ -1,3 +1,12 @@
+import{ listaProdutosPubli } from "../controllers/script.js"
+import{ CardCarrinho } from "./cart.js"
+
+const qtdCarrinho = document.querySelector(".divQuantidadeCarrinho")
+const ulCarrinho = document.querySelector(".vitrineCarrinho-Listar")
+const totalProdutos = document.querySelector(".divTotalCarrinho")
+
+let produto = []
+
 export class CardProduto{
     constructor(imgUrl, categoria, nomeProduto, descricao, preco, idProduto){
         this.imgUrl      = imgUrl
@@ -18,17 +27,48 @@ export class CardProduto{
                 <h2 class="h2Cardapio">${this.nomeProduto}</h2>
                 <p>${this.descricao}</p>
                 <div class="divPreco">
-                    <span class="preco">${this.preco}</span> 
+                    <span class="preco">R$: ${this.preco.toFixed(2)}</span> 
                     <button class="btnAddCarrinho"><img class="imgCart" src="./src/img/carrinho1.png" alt=""></button>
                 </div>
-        `
+        `;
         elementoPai.appendChild(this.liCardapio)
     }
 
     handleEvent(){
-        console.log(this.idProduto)
+        ulCarrinho.innerHTML = ""
+        produto.push(listaProdutosPubli.filter((elemento) => {
+            return elemento.id === this.idProduto   
+        })[0])
+        produto.forEach((elemento)=>{
+            if(elemento.id == elemento.id){
+                const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco)
+                liCarrinho.templateCarrinho(ulCarrinho)
+            }
+        })
+        this.quantidadeCarrinho()
+        this.somaTotal()
+    }
+    quantidadeCarrinho(){
+        console.log(produto)
+        
+        return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
+    }
+    somaTotal(){
+
+        let soma = 0
+        produto.map((elemento) =>{
+            soma += elemento.preco
+            console.log(soma)
+            return  totalProdutos.innerHTML = `Total R$:  ${soma.toFixed(2)}`  
+        })
+
+
+
+        // return totalProdutos.innerHTML = somaProdutos
+        
     }
 }
+
 
 
 
