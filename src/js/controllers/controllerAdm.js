@@ -96,3 +96,10 @@ filtros.addEventListener('click', (event)=>{
     
 })
 //--------------------------------------------------------------------------
+
+const btnLogout = document.querySelector('.btnLogout')
+
+btnLogout.addEventListener('click', ()=>{
+    localStorage.removeItem('tokenKF-G1Pedro')
+    location.assign('./../../index.html')
+})
