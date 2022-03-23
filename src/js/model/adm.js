@@ -36,5 +36,30 @@ export class Adm {
     handleEvent(event){
         console.log(this.idProduto)
     }
+
+    static filtrarPorBusca(valor, listaFonte){
+        
+        let valorMinusculo = valor.toLowerCase()
+
+        let arrayResult = listaFonte.filter((elemento) =>{
+
+            let categoriaFormatada = elemento.categoria.toLowerCase()
+            let descricaoFormatada = elemento.descricao.toLowerCase()
+            let nomeFormatado      = elemento.nome.toLowerCase()
+
+            if(categoriaFormatada.includes(valorMinusculo) || descricaoFormatada.includes(valorMinusculo) || nomeFormatado.includes(valorMinusculo)){
+                return elemento
+            }
+        })
+
+        return arrayResult
+    }
+
+    static filtrarPorCategoria(categoria, listaFonte){
+
+        let arrayResult = listaFonte.filter(value=>value.categoria === categoria)
+
+        return arrayResult        
+    }
     
 }
