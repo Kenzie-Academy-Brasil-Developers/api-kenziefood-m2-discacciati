@@ -29,7 +29,7 @@ formLogin.addEventListener("submit", async function(e) {
     }else{
 
         localStorage.setItem("tokenKF-G1Pedro", loginUser)
-        location.assign("./adm.html")
+        location.assign("./../../index.html")
 
     }
 
