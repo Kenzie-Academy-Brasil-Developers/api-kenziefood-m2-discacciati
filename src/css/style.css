@@ -234,6 +234,8 @@ h4{
 button:hover{
     cursor: pointer;
 
+}
+
 /*-------------------- Página login.html -------------------- */
 .containerFormLogin{
     width: 80%;
@@ -511,6 +513,8 @@ p{
     border-radius: 25px;
 
 }
+
+
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
