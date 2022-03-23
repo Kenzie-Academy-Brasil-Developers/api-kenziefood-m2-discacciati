@@ -5,14 +5,15 @@ import { Adm } from "../model/adm.js";
 const listaProdutosPubli = await API.listarProdutosPublico()
 console.log(listaProdutosPubli)
 
-const ulVitrineAdm = document.querySelector(".vitrineAdm-produtos")
+
+const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
 
 // Listar Produtos no Adm
 listaProdutosPubli.forEach((elemento) => {
-    const liProduto = new Adm(elemento.imagem, elemento.categoria, 
+    const trProduto = new Adm(elemento.imagem, elemento.categoria, 
     elemento.nome, elemento.descricao, elemento.id)
-    liProduto.criarTemplate(ulVitrineAdm)
+    trProduto.criarTemplate(tableVitrineAdm)
 })
 
 export { listaProdutosPubli }
@@ -29,22 +30,22 @@ inputBuscar.addEventListener('keyup', ()=>{
 
         listaProdutosBuscados = Adm.filtrarPorBusca(valorBuscado, listaProdutosPubli)
 
-        ulVitrineAdm.innerHTML = ""
+        tableVitrineAdm.innerHTML = ""
 
         listaProdutosBuscados.forEach((elemento) => {
-            const liProduto = new Adm(elemento.imagem, elemento.categoria, 
+            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
             elemento.nome, elemento.descricao, elemento.id)
-            liProduto.criarTemplate(ulVitrineAdm)
+            trProduto.criarTemplate(tableVitrineAdm)
         })
 
     }else{
 
-        ulVitrineAdm.innerHTML = ""
+        tableVitrineAdm.innerHTML = ""
 
         listaProdutosPubli.forEach((elemento) => {
-            const liProduto = new Adm(elemento.imagem, elemento.categoria, 
+            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
             elemento.nome, elemento.descricao, elemento.id)
-            liProduto.criarTemplate(ulVitrineAdm)
+            trProduto.criarTemplate(tableVitrineAdm)
         })
     }
     
@@ -71,24 +72,25 @@ filtros.addEventListener('click', (event)=>{
     
     if(valorFiltrado.includes('Todos')){
 
-        ulVitrineAdm.innerHTML = ""
+        tableVitrineAdm.innerHTML = ""
 
         listaProdutosPubli.forEach((elemento) => {
-            const liProduto = new Adm(elemento.imagem, elemento.categoria, 
+            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
             elemento.nome, elemento.descricao, elemento.id)
-            liProduto.criarTemplate(ulVitrineAdm)
+            trProduto.criarTemplate(tableVitrineAdm)
+
         })
     }
     else{
         
         const listaFiltrada = Adm.filtrarPorCategoria(categoria, listaProdutosPubli)
 
-        ulVitrineAdm.innerHTML = ""
+        tableVitrineAdm.innerHTML = ""
 
         listaFiltrada.forEach((elemento) => {
-            const liProduto = new Adm(elemento.imagem, elemento.categoria, 
+            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
             elemento.nome, elemento.descricao, elemento.id)
-            liProduto.criarTemplate(ulVitrineAdm)
+            trProduto.criarTemplate(tableVitrineAdm)
         })
     }
     
