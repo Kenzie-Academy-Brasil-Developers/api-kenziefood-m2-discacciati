@@ -5,7 +5,6 @@ import { Adm } from "../model/adm.js";
 const listaProdutosPubli = await API.listarProdutosPublico()
 console.log(listaProdutosPubli)
 
-
 const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
 
@@ -51,6 +50,22 @@ inputBuscar.addEventListener('keyup', ()=>{
     
 })
 //-----------------------------------------------------------
+
+// ----------- Adicionar Produto ------------------
+
+/* const btnAdicionarProduto = document.querySelector('.btn adicionarProduto')
+btnAdicionarProduto.addEventListener('click', (event)=>{
+    modalLogin.style.display = "flex"
+    botaoModalLogin.addEventListener("click", ()=> {
+         modalLogin.style.display = "none"
+            location.reload()
+
+
+
+}) */
+
+
+
 
 //-------------------Filtros-------------------------
 

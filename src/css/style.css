@@ -44,6 +44,10 @@ h4{
     border: 1px solid #E9ECEF;
     height: 28px;
 }
+
+.inputBuscar:focus{
+    outline:0;
+}
 .btnPesquisar{
     border: none;
     background-color: #f5c3cd;
@@ -341,6 +345,10 @@ button:hover{
     font-size: 16px;
 }
 
+.formularioLogin>input:focus{
+    outline:0;
+}
+
 .formularioLogin>button {
     width: 70%;
     height: 10%;
@@ -472,6 +480,10 @@ button:hover{
     font-size: 16px;
 }
 
+.formularioCadastro>input:focus{
+    outline:0;
+}
+
 .formularioCadastro>button {
     width: 70%;
     height: 10%;
@@ -572,17 +584,20 @@ button:hover{
     color: #868E96;
 }
 
-.vitrineAdm-produtos-listar-td{
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-}
-
-p{
+.vitrineAdm-produtos-listar-header-p{
     color: #868E96;
     padding: 5px 0px 5px 0px;
     font-size: 14px;
 }
+
+.vitrineAdm-produtos-listar-td{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
 .h2Adm{
     font-family: "poppins";
     font-weight: 500;
@@ -637,7 +652,7 @@ p{
     align-items: flex-start;
     margin: 5px;
 }
-.btnEditarExcluirAdm{
+.btnEditarAdm{
     width: 32px;
     height: 32px;
     border-radius: 150px;
@@ -650,15 +665,40 @@ p{
     line-height: 14px;
     color: #868E96;
 }
+.btnExcluirAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    border: none;
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
+}
+:focus{
+    outline:0;
+}
 .imgAdmAcao{
     height: 20px;
     border-radius: 150px;
     margin: 0 auto;
 }
 
+.vitrineAdm-produtos-listar-td-2{
+    width:250px;
+}
+
+
+
+
+
 .modalEdicao{
     display: none;
 }
+
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){

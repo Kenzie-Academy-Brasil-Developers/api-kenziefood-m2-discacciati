@@ -1,3 +1,4 @@
+import { API } from "./api.js"
 export class Adm {
     constructor(imgUrl, categoria, nomeProduto, descricao, idProduto, preco){
         this.imgUrl      = imgUrl
@@ -9,10 +10,14 @@ export class Adm {
 
         this.trAdm  = document.createElement("tr")
         this.trAdm.classList.add("vitrineAdm-produtos-listar")
-        this.trAdm.addEventListener("click", this) 
+        this.trAdm.addEventListener("click", this) //Assim o js procura o handleEvent
     }
 
+
+    static produtoExclusao
+  
     static produtoEdicao = {}
+
 
     criarTemplate(elementoPai){
         this.trAdm.innerHTML = `
@@ -22,24 +27,25 @@ export class Adm {
                 <td class="vitrineAdm-produtos-listar-td-2">
                     <h2 class="h2Adm">${this.nomeProduto}</h2>
                 </td>
-                <td class="vitrineAdm-produtos-listar-td- 3"class="divCategoriasAdm">
+                <td class="vitrineAdm-produtos-listar-td-3"class="divCategoriasAdm">
                     <button class="divCategoriaAdmBtn">${this.categoria}</button>
                 </td>
                 <td class="vitrineAdm-produtos-listar-td-4">
-                <p class="block-with-text">${this.descricao}</p>
+                <p class="block-with-text" alt="oi">${this.descricao}</p>
                 </td>
                 <td class="vitrineAdm-produtos-listar-td-5"class="divAcaoAdm">
-                   <button class="btnEditarAdm"><img class="imgAdmAcao" src="../img/lapisEditar.png" id="btnEditarAdm"></button>
-                   <button class="btnExcluirAdm"><img class="imgAdmAcao" src="../img/lixoDelete.png" id="btnExcluirAdm"></button>
+
+                   <button class="btnEditarAdm" title="Editar"><img class="imgAdmAcao" id="btnEditarAdm" src="../img/lapisEditar.png"></button>
+                   <button class="btnExcluirAdm" title="Excluir"><img class="imgAdmAcao" id="btnExcluirAdm" src="../img/lixoDelete.png"></button>
                 </td>
         `
         elementoPai.appendChild(this.trAdm)
     }
 
 
-    handleEvent(event){
-
-        const modalEdicao = document.querySelector('.modalEdicao')
+    async handleEvent(event){
+      
+      const modalEdicao = document.querySelector('.modalEdicao')
 
         if(event.target.id === 'btnEditarAdm'){
 
@@ -65,8 +71,49 @@ export class Adm {
         modalExit.addEventListener('click', () =>{
             modalEdicao.style.display = 'none'
         })
+      
+      
+        if( event.target.id == "btnExcluirAdm"){
+           const elementoPai = document.querySelector('#divsAdm')
+           Adm.deletarPost(elementoPai) 
+            Adm.produtoExclusao = this.idProduto
+            
+            const btnDeletarConfirm = document.querySelector('.divAdm-DeletarPost')
+            btnDeletarConfirm.addEventListener('click', (event)=>{
+                console.log(event.target.classList.value)
+                    if( event.target.classList.value =="btn-divAdm-Deletar"){
+                        //const excluir = await API.excluirProduto(API.infoUsuario.token, Adm.produtoExclusao)
+                    }
+                    else if( event.target.classList.value =="btn-divAdm-Deletar-Fechar"){
+                        //removeChild() // procurar como usar essa funcao
+                    }
+            })
 
+        }
     }
+
+//-------------- Deletar Post --------
+
+    static deletarPost(elementoPai){
+        const divDeletarPost = document.createElement("div")
+        divDeletarPost.classList.add("divAdm-DeletarPost")
+        divDeletarPost.innerHTML = `
+            <div class="divAdm-DeletarHeader">
+                <span>Exclusão de produto</span>
+                <button class="btn-divAdm-Deletar-Fechar">X</button>
+            </div>
+            <div class="divAdm-DeletarCorpo">
+                <p class="divAdm-Deletar-texto">Tem certeza que deseja excluir este produto?</p>
+            </div>
+            <div class="divAdm-DeletarBtns">
+                <button class="btn-divAdm-Deletar">Sim</button>
+                <button class="btn-divAdm-Deletar-Fechar">Não</button>
+            </div>
+        `
+        elementoPai.appendChild(divDeletarPost)
+    }
+
+//------------------------- Filtros -------------------
 
     static filtrarPorBusca(valor, listaFonte){
         
