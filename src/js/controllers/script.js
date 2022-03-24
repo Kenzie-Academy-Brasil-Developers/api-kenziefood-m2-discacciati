@@ -2,16 +2,18 @@ import { API } from "../model/api.js";
 import { CardProduto } from "../model/cards.js"
 import { CardCarrinho } from "../model/cart.js"
 
-let produto = []
+let produto = [...JSON.parse(localStorage.getItem('carrinhoKF-g1pedro'))]
 
 //---------------Botão de Login-----------
 
-const login = document.querySelector('.btnLogin')
+const login  = document.querySelector('.btnLogin')
+const logout = document.querySelector('#logoutHome')
 
 if(localStorage.getItem('tokenKF-G1Pedro')){
     API.infoUsuario.token = localStorage.getItem('tokenKF-G1Pedro')
     login.innerText = "Editar"
     login.style.backgroundColor = "green"
+    logout.style.display = 'block'
 }
 
 login.addEventListener('click',()=>{
@@ -133,3 +135,10 @@ btnLogout.addEventListener('click', ()=>{
     location.reload()
 })
 
+
+const ulCarrinho = document.querySelector(".vitrineCarrinho-Listar")
+
+produto.forEach((elemento)=>{           
+    const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
+    liCarrinho.templateCarrinho(ulCarrinho)
+})

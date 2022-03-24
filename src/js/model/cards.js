@@ -41,11 +41,18 @@ export class CardProduto{
             return elemento.id === this.idProduto   
         })[0])
         produto.forEach((elemento)=>{
-            if(elemento.id == elemento.id){
+           
                 const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
                 liCarrinho.templateCarrinho(ulCarrinho)
-            }
+            
         })
+
+        console.log(produto)
+        localStorage.setItem('carrinhoKF-g1pedro', JSON.stringify(produto))
+
+
+
+
         this.quantidadeCarrinho()
         this.somaTotal()
     }
