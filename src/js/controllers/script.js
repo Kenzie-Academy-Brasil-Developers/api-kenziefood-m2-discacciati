@@ -8,8 +8,7 @@ let produto = []
 
 const login = document.querySelector('.btnLogin')
 
-if(localStorage.getItem('tokenKF-G1Pedro')){
-    API.infoUsuario.token = localStorage.getItem('tokenKF-G1Pedro')
+if(API.infoUsuario.token){
     login.innerText = "Editar"
     login.style.backgroundColor = "green"
 }

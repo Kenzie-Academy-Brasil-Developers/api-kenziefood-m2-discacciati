@@ -44,6 +44,10 @@ h4{
     border: 1px solid #E9ECEF;
     height: 28px;
 }
+
+.inputBuscar:focus{
+    outline:0;
+}
 .btnPesquisar{
     border: none;
     background-color: #f5c3cd;
@@ -341,6 +345,10 @@ button:hover{
     font-size: 16px;
 }
 
+.formularioLogin>input:focus{
+    outline:0;
+}
+
 .formularioLogin>button {
     width: 70%;
     height: 10%;
@@ -472,6 +480,10 @@ button:hover{
     font-size: 16px;
 }
 
+.formularioCadastro>input:focus{
+    outline:0;
+}
+
 .formularioCadastro>button {
     width: 70%;
     height: 10%;
@@ -572,6 +584,12 @@ button:hover{
     color: #868E96;
 }
 
+.vitrineAdm-produtos-listar-header-p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+
 .vitrineAdm-produtos-listar-td{
     width: 250px;
     display: flex;
@@ -579,11 +597,7 @@ button:hover{
     justify-content: flex-start;
 }
 
-p{
-    color: #868E96;
-    padding: 5px 0px 5px 0px;
-    font-size: 14px;
-}
+
 .h2Adm{
     font-family: "poppins";
     font-weight: 500;
@@ -638,7 +652,7 @@ p{
     align-items: flex-start;
     margin: 5px;
 }
-.btnEditarExcluirAdm{
+.btnEditarAdm{
     width: 32px;
     height: 32px;
     border-radius: 150px;
@@ -651,11 +665,63 @@ p{
     line-height: 14px;
     color: #868E96;
 }
+.btnExcluirAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    border: none;
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
+}
+:focus{
+    outline:0;
+}
 .imgAdmAcao{
     height: 20px;
     border-radius: 150px;
     margin: 0 auto;
 }
+
+.vitrineAdm-produtos-listar-td-2{
+    width:250px;
+}
+
+/* ------ Modal ADM Exclusão -------*/
+.divAdm-DeletarPost{
+    border-radius: 8px ;
+    background: #FFFFFF;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.divAdm-DeletarHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    height: 70px;
+    background: #F8F9FA;
+    border-radius: 8px 8px 0px 0px;
+}
+.btn-divAdm-Deletar-Fechar{
+
+}
+.divAdm-DeletarCorpo{
+
+}
+.divAdm-Deletar-texto{
+
+}
+.divAdm-DeletarBtns{
+
+}
+
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
