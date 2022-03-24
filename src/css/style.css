@@ -32,10 +32,26 @@ h4{
     color: #FF2253;
     padding: 2px;
 }
+.inputEBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputEBtn > div{
+    padding: 2px;
+}
+.divInputEBtn{
+    display: flex;
+}
+.divBtnLoginLogOut{
+    display: flex;
+}
 .divBuscar{
     display: flex;
     align-items: center;
     position: relative;
+    width: 50%;
+    max-width: 191px;
 }
 .inputBuscar{
     background-color: #E9ECEF;
@@ -53,7 +69,8 @@ h4{
     top: 1;
     right: 0;
     border-radius: 25px;
-    margin-right: 5px;
+    /* margin-right: 150px;
+    margin-top: 2px; */
 }
 .categorias{
     display: flex;
@@ -138,16 +155,14 @@ h4{
 }
 .vitrineCardapio{
     display: flex;
-    width: 70%;
+    width: 100%;
 }
 .divPreco{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.asideCarrinho{
-    width: 30%;
-}
+
 .headerCarrinho{
     width: 100%;
     color: #FFF;
@@ -187,6 +202,7 @@ h4{
     font-family: "poppins";
     font-weight: 500;
     padding: 5px 0px 0px 0px;
+    /* height: 37px; */
 }
 .preco{
     display: flex;
@@ -230,9 +246,14 @@ h4{
     width: 10px;
     height: 10px;
 }
-.btnAddCarrinho{
+.btnAddCarrinho img{
+    pointer-events: none;
+} 
+
+.btnAddCarrinho{ 
     border: none;
     border-radius: 25px;
+    
 }
 .divQuantidadeCarrinho{
     width: 100%;
@@ -244,6 +265,10 @@ h4{
     width: 100%;
     height: 40px;
     line-height: 40px;
+}
+.vitrineCarrinho{
+    max-height: 350px;
+    overflow: auto;
 }
 .vitrineCarrinho-Listar{
     display: flex;
@@ -668,6 +693,16 @@ p{
     .pesquisarTodos{
         margin: 0px 0px 0px 20px;
     }
+    .divBuscar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* width: 25%; */
+    }
+    .btnPesquisar{
+        margin-right: 20px;
+        margin-top: 2px;
+    }
     .mainVitrine{
         display: flex;
         width: 90%;
@@ -688,7 +723,16 @@ p{
         width: 40%;
         display: flex;
     }
+    .vitrineCardapio-produtos-listar > p{
+        height: 80px;
+    }
+    .vitrineCardapio-produtos-listar > span{
+        margin-top: 20px;
+    }
     .asideCarrinho{
+        position: static;
+        bottom: auto;
+        transform: translateY(0);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -731,7 +775,12 @@ p{
         body{
             width: 100%;
         }
-
+        .divBuscar{
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* width: 19%; */
+        }
         .categorias{
             width: 60%;
         }
@@ -739,7 +788,7 @@ p{
             display: flex;
         }
         .vitrineCardapio-produtos-listar{
-            width: 40%;
+            width: 28%;
         }
 
         .imgCarrinho{
