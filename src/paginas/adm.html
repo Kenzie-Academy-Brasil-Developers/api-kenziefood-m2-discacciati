@@ -11,14 +11,16 @@
 <body>
     <header class="headerVitrine">
         <div class="nomeDoRestaurante">
-            <img class="imgHeader" src="../img/headerKenzie.png" alt="">
+            <a href="./../../index.html"><img class="imgHeader" src="../img/headerKenzie.png" alt=""></a>
         </div>
         <div class="divBuscar">
             <input class="inputBuscar" type="search" placeholder="pesquisar por produto">
             <button class="btnPesquisar" type="submit">&#128269;</button>
             <!-- <img src="lupinha.png" alt="imagem de uma lupa no campo de busca."> -->
         </div>
-    </header>
+
+        <button class="btnLogout">Sair</button>
+    </header> 
     <nav class="categorias">
         <ul class="listaDeBusca">
             <li><button class="btn pesquisarTodos" name="Todos">Todos</button></li>
@@ -26,16 +28,25 @@
             <li class="liFiltro"><button class="btn pesquisarFrutas"> <img class="imgFrutas" src="../img/frutas.png" alt=""> Frutas</button></li>
             <li class="liFiltro"><button class="btn pesquisarBebidas"> <img class="imgBebidas" src="../img/vinho1.jpg" alt=""> Bebidas</button></li>
         </ul>
-        <div>
-            <!-- <button class="adicionarProduto"></button> -->
+        <div class="div-btnAdicionarProduto">
+            <button class="btn adicionarProduto" alt=""><p class="btn-p-adicionarProduto">Adicionar novo produto</p></button>
         </div>
     </nav>
 
     <main class="mainAdm">
         <section class="vitrineAdm">
-            <ul class="vitrineAdm-produtos">
-                
-            </ul>
+            <table class="vitrineAdm-produtos-header">
+                <tr class="vitrineAdm-produtos-listar-header">
+                    <td class="vitrineAdm-produtos-listar-td-1"><p class="vitrineAdm-produtos-listar-header-p">  Produto </p> </td>
+                    <td class="vitrineAdm-produtos-listar-td-2"><p class="vitrineAdm-produtos-listar-header-p"> </td>
+                    <td class="vitrineAdm-produtos-listar-td-3"><p class="vitrineAdm-produtos-listar-header-p"> Categorias </td>
+                    <td class="vitrineAdm-produtos-listar-td-4"><p class="vitrineAdm-produtos-listar-header-p"> Descrição </td>
+                    <td class="vitrineAdm-produtos-listar-td-5"><p class="vitrineAdm-produtos-listar-header-p"> Ações </td>
+                </tr>  
+            </table>
+            <table class="vitrineAdm-produtos">
+                               
+            </table>
         </section>
 
     </main>

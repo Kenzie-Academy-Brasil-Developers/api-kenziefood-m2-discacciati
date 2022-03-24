@@ -14,8 +14,11 @@ formLogin.addEventListener("submit", async function(e) {
     }
 
     const loginUser = await API.autenticarUsuario(infoInputLogin)
+    console.log(loginUser)
 
-    if(loginUser.status === "Error"){
+
+    if(loginUser.status == 401 || loginUser.status == 404){
+
 
         modalLogin.style.display = "flex"
         botaoModalLogin.addEventListener("click", ()=> {
@@ -26,10 +29,8 @@ formLogin.addEventListener("submit", async function(e) {
     }else{
 
         localStorage.setItem("tokenKF-G1Pedro", loginUser)
-        location.assign("./adm.html")
+        location.assign("./../../index.html")
 
     }
-
-    console.log(loginUser)
 
 })

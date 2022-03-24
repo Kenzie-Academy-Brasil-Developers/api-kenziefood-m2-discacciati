@@ -116,6 +116,22 @@ h4{
     background-color: #FF2253;
     color: #FFF;
 }
+.adicionarProduto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    background-color: #FF2253;
+}
+.btn-p-adicionarProduto{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #F8F9FA;
+}
+
 .mainVitrine{
     display: flex;
     padding: 20px;
@@ -261,6 +277,17 @@ h4{
     color: white;
 }
 
+.btnLogout{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+
+
 button:hover{
     cursor: pointer;
 }
@@ -277,9 +304,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloLogin {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -290,14 +322,14 @@ button:hover{
 .formularioLogin {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioLogin>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -312,6 +344,7 @@ button:hover{
 .formularioLogin>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -324,6 +357,11 @@ button:hover{
     line-height: 19px;
 }
 
+.cadastroLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 
 /*Modais*/
 .modalErroLogin {
@@ -331,7 +369,7 @@ button:hover{
     width: 90%;
     height: 10%;
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 5%;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -363,7 +401,7 @@ button:hover{
     border: 1.5px solid #E9ECEF;
     margin-right: 15px;
 
-    font-family: 'Nunito';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -389,7 +427,7 @@ button:hover{
 /* -------------------- Página registro.html -------------------- */ 
 .containerFormCadastro {
     width: 80%;
-    margin-left: 18px;
+    margin: auto;
     height: 70vh;
     margin-top: 8vh;
     border-radius: 8px;
@@ -397,9 +435,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloCadastro {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -410,14 +453,14 @@ button:hover{
 .formularioCadastro {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioCadastro>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -432,6 +475,7 @@ button:hover{
 .formularioCadastro>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -444,6 +488,11 @@ button:hover{
     line-height: 19px;
 }
 
+.loginCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
 /*Modais*/
 .modalErroCadastro {
     display: none;
@@ -451,7 +500,7 @@ button:hover{
     height: 10%;
     position: fixed;
     top: 25%;
-    left: 1%;
+    left: 7.5%;
     background-color: #FFFFFF;
     border-radius: 12px;
 }
@@ -461,7 +510,7 @@ button:hover{
     height: 10%;
     position: fixed;
     top: 25%;
-    left: 1%;
+    left: 7.5%;
     background-color: #FFFFFF;
     border-radius: 12px;
 }
@@ -477,10 +526,17 @@ button:hover{
 .mainAdm{
     display: flex;
     padding: 20px;
+    margin: 0 auto;
 }
 .vitrineAdm{
     display: flex;
+    flex-direction: column;
     width: 90%;
+    margin: 0 auto;
+}
+.vitrineAdm-produtos-header{
+    display: flex;
+    flex-direction: column;
 }
 .vitrineAdm-produtos{
     display: flex;
@@ -488,11 +544,40 @@ button:hover{
 }
 .vitrineAdm-produtos-listar{
     display: flex;
-    width: 90%;
+    width: 100%;
+    height: 62px;
     flex-direction: row;
-    align-items: flex-start;
-    margin: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid #E9ECEF;  
+    box-sizing: border-box;
+    border-radius: 12px;
 }
+.vitrineAdm-produtos-listar-header{
+    display: flex;
+    width: 98%;
+    height: 62px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+
+.vitrineAdm-produtos-listar-td{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+}
+
 p{
     color: #868E96;
     padding: 5px 0px 5px 0px;
@@ -522,6 +607,7 @@ p{
     width: 93px;
     height: 27px;
     background: #F8F9FA;
+    border: none;
     border-radius: 8px;
     font-family: 'Poppins';
     font-style: normal;
@@ -530,21 +616,45 @@ p{
     line-height: 21px;
     color: #868E96;
 }
-.descricaoAdm{
+.block-with-text{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #868E96;
+
+    white-space: nowrap;
+    width: 25em;
+    overflow: hidden;
+    text-overflow: ellipsis;     
+    text-align: justify;
+}
+
+.divAcaoAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
 }
 .btnEditarExcluirAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
     border: none;
-    border-radius: 25px;
-
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
 }
-
-
+.imgAdmAcao{
+    height: 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
 
 /* -------- Media Query -------*/
 @media(min-width: 426px){
@@ -591,6 +701,29 @@ p{
     .vitrineCarrinho-Listar{
         display: flex;
     }
+    /*--- Login.html ---*/
+    .containerFormLogin {
+        width: 45%;       
+    }
+    .modalErroLogin {
+        width: 50%;
+        top: 35%;
+        left: 25%; 
+    }
+    /*--- Registro.html ---*/
+    .containerFormCadastro {
+        width: 45%;
+    }
+    .modalErroCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
+    .modalConfirmacaoCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
 
 }
     @media(min-width: 769px){
@@ -607,8 +740,32 @@ p{
         .vitrineCardapio-produtos-listar{
             width: 40%;
         }
+
         .imgCarrinho{
             width: 127px;
+        }
+        /*--- Login.html ---*/
+        .containerFormLogin {
+            width: 35%;       
+        }
+        .modalErroLogin {
+            width: 45%;
+            top: 35%;
+            left: 27.5%; 
+        }
+        /*--- Registro.html ---*/
+        .containerFormCadastro {
+            width: 35%;
+        }
+        .modalErroCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
+        }
+        .modalConfirmacaoCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
         }
    }
 
