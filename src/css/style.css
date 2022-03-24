@@ -164,7 +164,7 @@ h4{
 .carrinhoListar{
     display: flex;
     margin-bottom: 5px;
-    flex-direction: column;
+    flex-direction: row;
 }
 .vitrineCardapio-produtos{
     display: flex;
@@ -181,6 +181,7 @@ h4{
     color: #868E96;
     padding: 5px 0px 5px 0px;
     font-size: 14px;
+    line-height: 14px;
 }
 .h2Cardapio{
     font-family: "poppins";
@@ -191,6 +192,13 @@ h4{
     display: flex;
     justify-content: flex-start;
     padding: 2px;
+}
+.categoriaTemplateCardapiro{
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #868E96;
 }
 .imgCardapio{
     width: 100%;
@@ -203,6 +211,14 @@ h4{
 }
 .imgCarrinho{
     width: 40%;
+    height: 80px;
+}
+.imgLixoCarrinho{
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+    /* border-radius: 15px; */
 }
 .carrinhoListar > h2, .preco{
     font-size: 12px;
@@ -234,10 +250,24 @@ h4{
     flex-direction: column
 }
 .botaoExcluirCarrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F8F9FA;
 }
-
+.divOrdenarCarrinho{
+    display: flex;
+    flex-direction: column;
+}
+.divOrdenarCarrinho {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
 .btnLogin{
     width: 70px;
     height: 30px;
@@ -709,6 +739,10 @@ p{
         }
         .vitrineCardapio-produtos-listar{
             width: 40%;
+        }
+
+        .imgCarrinho{
+            width: 127px;
         }
         /*--- Login.html ---*/
         .containerFormLogin {
