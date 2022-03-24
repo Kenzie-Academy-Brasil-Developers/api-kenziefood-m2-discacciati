@@ -12,7 +12,7 @@ const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 // Listar Produtos no Adm
 listaProdutosPubli.forEach((elemento) => {
     const trProduto = new Adm(elemento.imagem, elemento.categoria, 
-    elemento.nome, elemento.descricao, elemento.id)
+    elemento.nome, elemento.descricao, elemento.id, elemento.preco)
     trProduto.criarTemplate(tableVitrineAdm)
 })
 

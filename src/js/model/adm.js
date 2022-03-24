@@ -1,15 +1,18 @@
 export class Adm {
-    constructor(imgUrl, categoria, nomeProduto, descricao, idProduto){
+    constructor(imgUrl, categoria, nomeProduto, descricao, idProduto, preco){
         this.imgUrl      = imgUrl
         this.categoria   = categoria
         this.nomeProduto = nomeProduto
         this.descricao   = descricao
         this.idProduto   = idProduto
+        this.preco       = preco
 
         this.trAdm  = document.createElement("tr")
         this.trAdm.classList.add("vitrineAdm-produtos-listar")
         this.trAdm.addEventListener("click", this) 
     }
+
+    static produtoEdicao = {}
 
     criarTemplate(elementoPai){
         this.trAdm.innerHTML = `
@@ -26,15 +29,43 @@ export class Adm {
                 <p class="block-with-text">${this.descricao}</p>
                 </td>
                 <td class="vitrineAdm-produtos-listar-td-5"class="divAcaoAdm">
-                   <button class="btnEditarExcluirAdm"><img class="imgAdmAcao" src="../img/lapisEditar.png"></button>
-                   <button class="btnEditarExcluirAdm"><img class="imgAdmAcao" src="../img/lixoDelete.png"></button>
+                   <button class="btnEditarAdm"><img class="imgAdmAcao" src="../img/lapisEditar.png" id="btnEditarAdm"></button>
+                   <button class="btnExcluirAdm"><img class="imgAdmAcao" src="../img/lixoDelete.png" id="btnExcluirAdm"></button>
                 </td>
         `
         elementoPai.appendChild(this.trAdm)
     }
 
+
     handleEvent(event){
-        console.log(this.idProduto)
+
+        const modalEdicao = document.querySelector('.modalEdicao')
+
+        if(event.target.id === 'btnEditarAdm'){
+
+            const inputModEditNome  = document.querySelector('#inputModEditNome')
+            const inputModEditDesc  = document.querySelector('#inputModEditDesc')
+            const inputModEditValor = document.querySelector('#inputModEditValor')
+            const inputModEditUrl   = document.querySelector('#inputModEditUrl')
+            
+            Adm.produtoEdicao = {...this}
+            inputModEditNome.value  = Adm.produtoEdicao.nomeProduto
+            inputModEditDesc.value  = Adm.produtoEdicao.descricao
+            inputModEditValor.value = Adm.produtoEdicao.preco
+            inputModEditUrl.value   = Adm.produtoEdicao.imgUrl
+
+
+            console.log(Adm.produtoEdicao)
+
+
+            modalEdicao.style.display = 'flex'
+        }
+
+        const modalExit = document.querySelector('.modalExit')
+        modalExit.addEventListener('click', () =>{
+            modalEdicao.style.display = 'none'
+        })
+
     }
 
     static filtrarPorBusca(valor, listaFonte){
