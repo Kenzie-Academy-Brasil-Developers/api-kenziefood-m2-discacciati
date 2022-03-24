@@ -2,7 +2,13 @@ import { API } from "../model/api.js";
 import { CardProduto } from "../model/cards.js"
 import { CardCarrinho } from "../model/cart.js"
 
-let produto = [...JSON.parse(localStorage.getItem('carrinhoKF-g1pedro'))]
+const armazenamentoLocal = localStorage.getItem('carrinhoKF-g1pedro')
+
+let produto = []
+
+if(armazenamentoLocal){
+    produto = [...JSON.parse(localStorage.getItem('carrinhoKF-g1pedro'))]
+}
 
 //---------------Botão de Login-----------
 
