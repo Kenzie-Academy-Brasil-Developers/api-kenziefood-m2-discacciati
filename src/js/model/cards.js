@@ -47,19 +47,16 @@ export class CardProduto{
             
         })
 
-        console.log(produto)
+        
         localStorage.setItem('carrinhoKF-g1pedro', JSON.stringify(produto))
 
-
-
-
-        this.quantidadeCarrinho()
-        this.somaTotal()
+        CardProduto.quantidadeCarrinho()
+        CardProduto.somaTotal()
     }
-    quantidadeCarrinho(){
+    static quantidadeCarrinho(){
         return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
     }
-    somaTotal(){
+    static somaTotal(){
         let soma = 0
         produto.map((elemento) =>{
             soma += elemento.preco

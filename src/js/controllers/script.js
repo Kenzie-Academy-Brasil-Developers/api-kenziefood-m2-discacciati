@@ -142,3 +142,29 @@ produto.forEach((elemento)=>{
     const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
     liCarrinho.templateCarrinho(ulCarrinho)
 })
+CardProduto.quantidadeCarrinho()
+CardProduto.somaTotal()
+
+
+
+const btnExibirCarrinho = document.querySelector('.btnCarrinhoMobile')
+const asideCarrinho     = document.querySelector('.asideCarrinho')
+const ocultarCarrinho   = document.querySelector('.ocultarCarrinho')
+const body              = document.querySelector('body')
+const header            = document.querySelector('.headerVitrine')
+
+
+btnExibirCarrinho.addEventListener('click', ()=>{
+    asideCarrinho.style.display = 'block'
+    body.style.background = 'rgba(0, 0, 0, 0.5)'
+    header.style.background = 'rgba(0, 0, 0, 0)'
+   
+})
+
+ocultarCarrinho.addEventListener('click', ()=>{
+    asideCarrinho.style.display = 'none'
+    body.style.background = 'white'
+    header.style.background = 'white'
+})
+
+
