@@ -314,7 +314,7 @@ button:hover{
     padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
     line-height: 20px;
 }
@@ -445,7 +445,7 @@ button:hover{
     padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
     line-height: 20px;
 }
@@ -746,8 +746,22 @@ p{
         }
         /*--- Login.html ---*/
         .containerFormLogin {
-            width: 35%;       
+            width: 35%;    
         }
+
+        .formularioLogin>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonCadastro {
+            margin-top: 8.5%;
+        }
+
+        .cadastroLogin {
+            margin-top: -10.5%;
+            margin-left: 20%;
+        }
+
         .modalErroLogin {
             width: 45%;
             top: 35%;
@@ -756,7 +770,22 @@ p{
         /*--- Registro.html ---*/
         .containerFormCadastro {
             width: 35%;
+            height: 80vh;
         }
+
+        .formularioCadastro>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonLogin {
+            margin-top: 8.5%;
+        }
+        
+        .loginCadastro {
+            margin-top: -6%;
+            margin-left: 20%;
+        }
+
         .modalErroCadastro {
             width: 45%;
             top: 35%;
