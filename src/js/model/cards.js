@@ -36,8 +36,6 @@ export class CardProduto{
     }
 
     handleEvent(){
-        
-
         const target = event.target
         if(target.tagName == "BUTTON"){
             ulCarrinho.innerHTML = ""
@@ -47,30 +45,23 @@ export class CardProduto{
                 return elemento.id === this.idProduto   
             })[0])
             produto.forEach((elemento)=>{
-                if(elemento.id == elemento.id){
+               
                     const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
                     liCarrinho.templateCarrinho(ulCarrinho)
-                }
+                
             })
-            this.quantidadeCarrinho()
-            this.somaTotal()
+          localStorage.setItem('carrinhoKF-g1pedro', JSON.stringify(produto))
+
+           CardProduto.quantidadeCarrinho()
+           CardProduto.somaTotal()
         }
-        // produto.push(listaProdutosPubli.filter((elemento) => {
-        //     return elemento.id === this.idProduto   
-        // })[0])
-        // produto.forEach((elemento)=>{
-        //     if(elemento.id == elemento.id){
-        //         const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
-        //         liCarrinho.templateCarrinho(ulCarrinho)
-        //     }
-        // })
-        // this.quantidadeCarrinho()
-        // this.somaTotal()
+        
+
     }
-    quantidadeCarrinho(){
+    static quantidadeCarrinho(){
         return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
     }
-    somaTotal(){
+    static somaTotal(){
         let soma = 0
         produto.map((elemento) =>{
             soma += elemento.preco
