@@ -164,7 +164,7 @@ h4{
 .carrinhoListar{
     display: flex;
     margin-bottom: 5px;
-    flex-direction: column;
+    flex-direction: row;
 }
 .vitrineCardapio-produtos{
     display: flex;
@@ -181,6 +181,7 @@ h4{
     color: #868E96;
     padding: 5px 0px 5px 0px;
     font-size: 14px;
+    line-height: 14px;
 }
 .h2Cardapio{
     font-family: "poppins";
@@ -191,6 +192,13 @@ h4{
     display: flex;
     justify-content: flex-start;
     padding: 2px;
+}
+.categoriaTemplateCardapiro{
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #868E96;
 }
 .imgCardapio{
     width: 100%;
@@ -203,6 +211,14 @@ h4{
 }
 .imgCarrinho{
     width: 40%;
+    height: 80px;
+}
+.imgLixoCarrinho{
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+    /* border-radius: 15px; */
 }
 .carrinhoListar > h2, .preco{
     font-size: 12px;
@@ -234,10 +250,24 @@ h4{
     flex-direction: column
 }
 .botaoExcluirCarrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F8F9FA;
 }
-
+.divOrdenarCarrinho{
+    display: flex;
+    flex-direction: column;
+}
+.divOrdenarCarrinho {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
 .btnLogin{
     width: 70px;
     height: 30px;
@@ -274,9 +304,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloLogin {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -287,14 +322,14 @@ button:hover{
 .formularioLogin {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioLogin>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -309,6 +344,7 @@ button:hover{
 .formularioLogin>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -321,6 +357,11 @@ button:hover{
     line-height: 19px;
 }
 
+.cadastroLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
 
 /*Modais*/
 .modalErroLogin {
@@ -328,7 +369,7 @@ button:hover{
     width: 90%;
     height: 10%;
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 5%;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -360,7 +401,7 @@ button:hover{
     border: 1.5px solid #E9ECEF;
     margin-right: 15px;
 
-    font-family: 'Nunito';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -386,7 +427,7 @@ button:hover{
 /* -------------------- Página registro.html -------------------- */ 
 .containerFormCadastro {
     width: 80%;
-    margin-left: 18px;
+    margin: auto;
     height: 70vh;
     margin-top: 8vh;
     border-radius: 8px;
@@ -394,9 +435,14 @@ button:hover{
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
+.logoCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .tituloCadastro {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -407,14 +453,14 @@ button:hover{
 .formularioCadastro {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    height: 80%;
+    height: 70%;
 }
 
 .formularioCadastro>input {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #E9ECEF;
     border: 1.5px solid #E9ECEF;
     border-radius: 12px;
@@ -429,6 +475,7 @@ button:hover{
 .formularioCadastro>button {
     width: 70%;
     height: 10%;
+    margin-top: 15%;
     background-color: #FF2253;
     border: 1.5px solid #FF2253;
     border-radius: 12px;
@@ -441,6 +488,11 @@ button:hover{
     line-height: 19px;
 }
 
+.loginCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
 /*Modais*/
 .modalErroCadastro {
     display: none;
@@ -448,7 +500,7 @@ button:hover{
     height: 10%;
     position: fixed;
     top: 25%;
-    left: 1%;
+    left: 7.5%;
     background-color: #FFFFFF;
     border-radius: 12px;
 }
@@ -458,7 +510,7 @@ button:hover{
     height: 10%;
     position: fixed;
     top: 25%;
-    left: 1%;
+    left: 7.5%;
     background-color: #FFFFFF;
     border-radius: 12px;
 }
@@ -650,6 +702,29 @@ p{
     .vitrineCarrinho-Listar{
         display: flex;
     }
+    /*--- Login.html ---*/
+    .containerFormLogin {
+        width: 45%;       
+    }
+    .modalErroLogin {
+        width: 50%;
+        top: 35%;
+        left: 25%; 
+    }
+    /*--- Registro.html ---*/
+    .containerFormCadastro {
+        width: 45%;
+    }
+    .modalErroCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
+    .modalConfirmacaoCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
 
 }
     @media(min-width: 769px){
@@ -665,6 +740,33 @@ p{
         }
         .vitrineCardapio-produtos-listar{
             width: 40%;
+        }
+
+        .imgCarrinho{
+            width: 127px;
+        }
+        /*--- Login.html ---*/
+        .containerFormLogin {
+            width: 35%;       
+        }
+        .modalErroLogin {
+            width: 45%;
+            top: 35%;
+            left: 27.5%; 
+        }
+        /*--- Registro.html ---*/
+        .containerFormCadastro {
+            width: 35%;
+        }
+        .modalErroCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
+        }
+        .modalConfirmacaoCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
         }
    }
 
