@@ -1,18 +1,23 @@
 import { API } from "./api.js"
 export class Adm {
-    constructor(imgUrl, categoria, nomeProduto, descricao, idProduto){
+    constructor(imgUrl, categoria, nomeProduto, descricao, idProduto, preco){
         this.imgUrl      = imgUrl
         this.categoria   = categoria
         this.nomeProduto = nomeProduto
         this.descricao   = descricao
         this.idProduto   = idProduto
+        this.preco       = preco
 
         this.trAdm  = document.createElement("tr")
         this.trAdm.classList.add("vitrineAdm-produtos-listar")
         this.trAdm.addEventListener("click", this) //Assim o js procura o handleEvent
     }
 
+
     static produtoExclusao
+  
+    static produtoEdicao = {}
+
 
     criarTemplate(elementoPai){
         this.trAdm.innerHTML = `
@@ -29,6 +34,7 @@ export class Adm {
                 <p class="block-with-text" alt="oi">${this.descricao}</p>
                 </td>
                 <td class="vitrineAdm-produtos-listar-td-5"class="divAcaoAdm">
+
                    <button class="btnEditarAdm" title="Editar"><img class="imgAdmAcao" id="btnEditarAdm" src="../img/lapisEditar.png"></button>
                    <button class="btnExcluirAdm" title="Excluir"><img class="imgAdmAcao" id="btnExcluirAdm" src="../img/lixoDelete.png"></button>
                 </td>
@@ -36,8 +42,37 @@ export class Adm {
         elementoPai.appendChild(this.trAdm)
     }
 
-    async handleEvent(event){
 
+    async handleEvent(event){
+      
+      const modalEdicao = document.querySelector('.modalEdicao')
+
+        if(event.target.id === 'btnEditarAdm'){
+
+            const inputModEditNome  = document.querySelector('#inputModEditNome')
+            const inputModEditDesc  = document.querySelector('#inputModEditDesc')
+            const inputModEditValor = document.querySelector('#inputModEditValor')
+            const inputModEditUrl   = document.querySelector('#inputModEditUrl')
+            
+            Adm.produtoEdicao = {...this}
+            inputModEditNome.value  = Adm.produtoEdicao.nomeProduto
+            inputModEditDesc.value  = Adm.produtoEdicao.descricao
+            inputModEditValor.value = Adm.produtoEdicao.preco
+            inputModEditUrl.value   = Adm.produtoEdicao.imgUrl
+
+
+            console.log(Adm.produtoEdicao)
+
+
+            modalEdicao.style.display = 'flex'
+        }
+
+        const modalExit = document.querySelector('.modalExit')
+        modalExit.addEventListener('click', () =>{
+            modalEdicao.style.display = 'none'
+        })
+      
+      
         if( event.target.id == "btnExcluirAdm"){
            const elementoPai = document.querySelector('#divsAdm')
            Adm.deletarPost(elementoPai) 
@@ -56,6 +91,8 @@ export class Adm {
 
         }
     }
+
+//-------------- Deletar Post --------
 
     static deletarPost(elementoPai){
         const divDeletarPost = document.createElement("div")
@@ -76,7 +113,7 @@ export class Adm {
         elementoPai.appendChild(divDeletarPost)
     }
 
-
+//------------------------- Filtros -------------------
 
     static filtrarPorBusca(valor, listaFonte){
         

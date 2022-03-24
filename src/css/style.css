@@ -318,7 +318,7 @@ button:hover{
     padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
     line-height: 20px;
 }
@@ -453,7 +453,7 @@ button:hover{
     padding-top: 5%;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
     line-height: 20px;
 }
@@ -691,35 +691,12 @@ button:hover{
     width:250px;
 }
 
-/* ------ Modal ADM Exclusão -------*/
-.divAdm-DeletarPost{
-    border-radius: 8px ;
-    background: #FFFFFF;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-}
-.divAdm-DeletarHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 28px;
-    height: 70px;
-    background: #F8F9FA;
-    border-radius: 8px 8px 0px 0px;
-}
-.btn-divAdm-Deletar-Fechar{
 
-}
-.divAdm-DeletarCorpo{
 
-}
-.divAdm-Deletar-texto{
 
-}
-.divAdm-DeletarBtns{
 
+.modalEdicao{
+    display: none;
 }
 
 
@@ -813,8 +790,22 @@ button:hover{
         }
         /*--- Login.html ---*/
         .containerFormLogin {
-            width: 35%;       
+            width: 35%;    
         }
+
+        .formularioLogin>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonCadastro {
+            margin-top: 8.5%;
+        }
+
+        .cadastroLogin {
+            margin-top: -10.5%;
+            margin-left: 20%;
+        }
+
         .modalErroLogin {
             width: 45%;
             top: 35%;
@@ -823,7 +814,22 @@ button:hover{
         /*--- Registro.html ---*/
         .containerFormCadastro {
             width: 35%;
+            height: 80vh;
         }
+
+        .formularioCadastro>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonLogin {
+            margin-top: 8.5%;
+        }
+        
+        .loginCadastro {
+            margin-top: -6%;
+            margin-left: 20%;
+        }
+
         .modalErroCadastro {
             width: 45%;
             top: 35%;
