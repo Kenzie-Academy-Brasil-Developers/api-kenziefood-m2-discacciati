@@ -32,10 +32,26 @@ h4{
     color: #FF2253;
     padding: 2px;
 }
+.inputEBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputEBtn > div{
+    padding: 2px;
+}
+.divInputEBtn{
+    display: flex;
+}
+.divBtnLoginLogOut{
+    display: flex;
+}
 .divBuscar{
     display: flex;
     align-items: center;
     position: relative;
+    width: 50%;
+    max-width: 191px;
 }
 .inputBuscar{
     background-color: #E9ECEF;
@@ -57,7 +73,8 @@ h4{
     top: 1;
     right: 0;
     border-radius: 25px;
-    margin-right: 5px;
+    /* margin-right: 150px;
+    margin-top: 2px; */
 }
 .categorias{
     display: flex;
@@ -142,16 +159,43 @@ h4{
 }
 .vitrineCardapio{
     display: flex;
-    width: 70%;
+    width: 100%;
 }
 .divPreco{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 .asideCarrinho{
+    display: none;
+    position: fixed;
     width: 30%;
+    background-color: white;
+    top: 11vh;
+    left: 19px;
+    width: 386px;
+      
 }
+
+.btnCarrinhoMobile{
+    position: fixed;
+    bottom: 0px;
+    left: 0%;
+    width: 134vw;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1px;
+    line-height: 28px;
+    color: #FFFFFF;
+    height: 60px;
+    background: #FF2253;
+    border: none;
+    
+}
+
+
 .headerCarrinho{
     width: 100%;
     color: #FFF;
@@ -159,7 +203,15 @@ h4{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.ocultarCarrinho{
+    margin-right: 13px;
+}
+
 .headerCarrinho > h3{
     font-size: 16px;
     height: 40px;
@@ -191,6 +243,7 @@ h4{
     font-family: "poppins";
     font-weight: 500;
     padding: 5px 0px 0px 0px;
+    /* height: 37px; */
 }
 .preco{
     display: flex;
@@ -234,9 +287,14 @@ h4{
     width: 10px;
     height: 10px;
 }
-.btnAddCarrinho{
+.btnAddCarrinho img{
+    pointer-events: none;
+} 
+
+.btnAddCarrinho{ 
     border: none;
     border-radius: 25px;
+    
 }
 .divQuantidadeCarrinho{
     width: 100%;
@@ -249,6 +307,13 @@ h4{
     height: 40px;
     line-height: 40px;
 }
+
+.vitrineCarrinho{
+    overflow: auto;
+    max-height: 60vh;
+}
+
+
 .vitrineCarrinho-Listar{
     display: flex;
     flex-direction: column
@@ -288,6 +353,10 @@ h4{
     border-radius: 50px;
     background: #FF2253;
     color: white;
+}
+
+#logoutHome{
+    display: none;
 }
 
 
@@ -691,10 +760,6 @@ button:hover{
     width:250px;
 }
 
-
-
-
-
 .modalEdicao {
     display: none;
     flex-direction: column;
@@ -742,9 +807,7 @@ button:hover{
 }
 
 .modalNomeDesc {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  align-items: flex-start;
     width: 100%;
     height: 20vh;
     margin-left: 20%;
@@ -760,6 +823,7 @@ button:hover{
     line-height: 20px;
     color: #000000;
 }
+
 .modalNomeDesc> #inputModEditNome {
     margin-top: 1%;
     margin-bottom: 3%;
@@ -867,7 +931,7 @@ button:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 15px 20px;
+  padding: 15px 20px;
     border: none;
     box-sizing: border-box;
     border-radius: 32px;
@@ -879,7 +943,6 @@ button:hover{
     line-height: 19px;
     text-align: center;
     color: #F8F9FA;
-
 }
 
 .modalAdicionar {
@@ -986,6 +1049,100 @@ button:hover{
     line-height: 19px;
     text-align: center;
     color: #F8F9FA;
+}
+
+/* ------ Modal ADM Exclusão -------*/
+.divAdm-DeletarPost{
+    border-radius: 8px ;
+    background: #FFFFFF;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    top: 52px;
+    left: 25%;
+}
+
+
+
+.divAdm-DeletarCorpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #000000;
+}
+.divAdm-DeletarBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding: 15px 20px;
+    height: 52px;
+}
+.btn-divAdm-Deletar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: 30px;
+    width: 90px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #868E96;
+}
+
+.btn-divAdm-Deletar-Fechar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: 30px;
+    width: 90px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #868E96;
+}
+
+.btn-divAdm-Deletar-Fechar-2{
+    background: #E9ECEF;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    border:none;
 
 }
 
@@ -999,6 +1156,16 @@ button:hover{
     }
     .pesquisarTodos{
         margin: 0px 0px 0px 20px;
+    }
+    .divBuscar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* width: 25%; */
+    }
+    .btnPesquisar{
+        margin-right: 20px;
+        margin-top: 2px;
     }
     .mainVitrine{
         display: flex;
@@ -1020,12 +1187,29 @@ button:hover{
         width: 40%;
         display: flex;
     }
+    .vitrineCardapio-produtos-listar > p{
+        height: 80px;
+    }
+    .vitrineCardapio-produtos-listar > span{
+        margin-top: 20px;
+    }
+  
     .asideCarrinho{
+
+        display: block;
+        position: static;
+        bottom: auto;
+        transform: translateY(0);
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 30%;
     }
+
+    .ocultarCarrinho{
+        display: none;
+    }
+
     .vitrineCarrinho{
         display: flex;
         flex-direction: column;
@@ -1058,12 +1242,21 @@ button:hover{
         left: 25%;
     }
 
+    .btnCarrinhoMobile{
+        display: none;
+    }
+
 }
     @media(min-width: 769px){
         body{
             width: 100%;
         }
-
+        .divBuscar{
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* width: 19%; */
+        }
         .categorias{
             width: 60%;
         }
@@ -1071,7 +1264,7 @@ button:hover{
             display: flex;
         }
         .vitrineCardapio-produtos-listar{
-            width: 40%;
+            width: 28%;
         }
 
         .imgCarrinho{
@@ -1080,6 +1273,7 @@ button:hover{
         /*--- Login.html ---*/
         .containerFormLogin {
             width: 35%;    
+
         }
 
         .formularioLogin>input {
@@ -1089,6 +1283,16 @@ button:hover{
         #buttonCadastro {
             margin-top: 8.5%;
         }
+
+
+        .formularioLogin>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonCadastro {
+            margin-top: 8.5%;
+        }
+
 
         .cadastroLogin {
             margin-top: -10.5%;
@@ -1104,6 +1308,7 @@ button:hover{
         .containerFormCadastro {
             width: 35%;
             height: 80vh;
+
         }
 
         .formularioCadastro>input {
@@ -1119,6 +1324,23 @@ button:hover{
             margin-left: 20%;
         }
 
+
+        
+
+        .formularioCadastro>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonLogin {
+            margin-top: 8.5%;
+        }
+        
+        .loginCadastro {
+            margin-top: -6%;
+            margin-left: 20%;
+        }
+
+
         .modalErroCadastro {
             width: 45%;
             top: 35%;
@@ -1128,6 +1350,18 @@ button:hover{
             width: 45%;
             top: 35%;
             left: 27.5%;
+        }
+
+        .asideCarrinho{
+            display: block;
+            position: static;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        
+        .ocultarCarrinho{
+            display: none;
         }
    }
 

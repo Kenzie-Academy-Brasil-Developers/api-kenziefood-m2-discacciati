@@ -2,15 +2,23 @@ import { API } from "../model/api.js";
 import { CardProduto } from "../model/cards.js"
 import { CardCarrinho } from "../model/cart.js"
 
+const armazenamentoLocal = localStorage.getItem('carrinhoKF-g1pedro')
+
 let produto = []
+
+if(armazenamentoLocal){
+    produto = [...JSON.parse(localStorage.getItem('carrinhoKF-g1pedro'))]
+}
 
 //---------------Botão de Login-----------
 
-const login = document.querySelector('.btnLogin')
+const login  = document.querySelector('.btnLogin')
+const logout = document.querySelector('#logoutHome')
 
 if(API.infoUsuario.token){
     login.innerText = "Editar"
     login.style.backgroundColor = "green"
+    logout.style.display = 'block'
 }
 
 login.addEventListener('click',()=>{
@@ -131,4 +139,37 @@ btnLogout.addEventListener('click', ()=>{
     localStorage.removeItem('tokenKF-G1Pedro')
     location.reload()
 })
+
+
+const ulCarrinho = document.querySelector(".vitrineCarrinho-Listar")
+
+produto.forEach((elemento)=>{           
+    const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
+    liCarrinho.templateCarrinho(ulCarrinho)
+})
+CardProduto.quantidadeCarrinho()
+CardProduto.somaTotal()
+
+
+
+const btnExibirCarrinho = document.querySelector('.btnCarrinhoMobile')
+const asideCarrinho     = document.querySelector('.asideCarrinho')
+const ocultarCarrinho   = document.querySelector('.ocultarCarrinho')
+const body              = document.querySelector('body')
+const header            = document.querySelector('.headerVitrine')
+
+
+btnExibirCarrinho.addEventListener('click', ()=>{
+    asideCarrinho.style.display = 'block'
+    body.style.background = 'rgba(0, 0, 0, 0.5)'
+    header.style.background = 'rgba(0, 0, 0, 0)'
+   
+})
+
+ocultarCarrinho.addEventListener('click', ()=>{
+    asideCarrinho.style.display = 'none'
+    body.style.background = 'white'
+    header.style.background = 'white'
+})
+
 
