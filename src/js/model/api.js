@@ -98,7 +98,7 @@ export class API{
                         },
         })    
 
-        return response.json()
+        return response
     }
 
     static async listarProdutosNoCarrinho(token){
