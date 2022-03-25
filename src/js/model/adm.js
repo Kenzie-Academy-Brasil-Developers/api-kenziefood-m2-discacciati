@@ -121,10 +121,10 @@ export class Adm {
           
             const response = await API.atualizarProduto(API.infoUsuario.token,dadosProduto, Adm.produtoEdicao.idProduto)
 
-            console.log(response)           
+            //console.log(response)           
 
             let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
-            console.log(listaAtualizada)
+            //console.log(listaAtualizada)
 
             Adm.elementoTabela.innerHTML = ""
 
