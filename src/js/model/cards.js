@@ -59,13 +59,13 @@ export class CardProduto{
 
     }
     static quantidadeCarrinho(){
-        return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
+        return qtdCarrinho.innerHTML = `<div>Quantidade</div> <div>${produto.length}</div>`
     }
     static somaTotal(){
         let soma = 0
         produto.map((elemento) =>{
             soma += elemento.preco
-            return  totalProdutos.innerHTML = `Total R$:  ${soma.toFixed(2)}`  
+            return  totalProdutos.innerHTML = `<div>Total</div> <div>R$:  ${soma.toFixed(2)}</div>`  
         })
     }
 
