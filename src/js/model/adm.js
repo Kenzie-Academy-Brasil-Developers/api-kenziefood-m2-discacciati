@@ -193,6 +193,49 @@ export class Adm {
         elementoPai.appendChild(divDeletarPost)
     }
 
+    //-------------- Modal Status Adicionar --------
+
+    static statusAdicionarSucesso(elementoPai){
+        const divStatusAdcionarSucesso = document.createElement("div")
+        divStatusAdcionarSucesso.classList.add("divAdm-Status-Add-Sucesso")
+        divStatusAdcionarSucesso.innerHTML = `
+            <div class="divAdm-Status-Add-Header">
+                <div>
+                    <span>Status</span>
+                </div>
+                <div>
+                    <button class="btn-divAdm-Deletar-Fechar-2">X</button>
+                </div>
+                </div>
+                <div class="divAdm-Status-Add-Corpo-Sucesso">
+                <p class="divAdm-Deletar-texto">Produto adicionado com sucesso</p>
+                
+        `
+        elementoPai.appendChild(divDeletarPost)
+    }
+
+
+    static statusAdicionarErro(elementoPai){
+        const divStatusAdcionarSucesso = document.createElement("div")
+        divStatusAdcionarSucesso.classList.add("divAdm-Status-Add-Erro")
+        divStatusAdcionarSucesso.innerHTML = `
+        <div class="divAdm-Status-Add-Header">
+                <div>
+                    <span>Status</span>
+                </div>
+                <div>
+                    <button class="btn-divAdm-Deletar-Fechar-2">X</button>
+                </div>
+                </div>
+                <div class="divAdm-Status-Add-Corpo-Erro">
+                <p class="divAdm-Deletar-texto">Ocorreu algum erro, o produto não foi adicionado</p>
+                </div>
+        `
+        elementoPai.appendChild(divDeletarPost)
+    }
+
+
+
 //------------------------- Filtros -------------------
 
     static filtrarPorBusca(valor, listaFonte){
