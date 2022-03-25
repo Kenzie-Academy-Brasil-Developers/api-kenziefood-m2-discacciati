@@ -2,10 +2,10 @@ import { API } from "../model/api.js";
 import { Adm } from "../model/adm.js";
 
 
-const listaProdutosPubli = await API.listarProdutosPublico()
+const listaProdutosPubli = await API.listarProdutosPorToken(API.infoUsuario.token)
 console.log(listaProdutosPubli)
 
-const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
+export const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
 
 // Listar Produtos no Adm
@@ -149,6 +149,7 @@ btnAdicionarProduto.addEventListener('click', () => {
 
     const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
     btnModSaveChangesAdd.addEventListener('click', async function () {
+        
         const dadosProduto = {
             nome: inputModAddNome.value,
             preco: Number(inputModAddValor.value),
@@ -157,20 +158,44 @@ btnAdicionarProduto.addEventListener('click', () => {
             descricao: inputModAddDesc.value  
         }
         
-        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)
+        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)            
+                
+        console.log(response)
 
-        modalAdicionar.style.display = 'none'
+        let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
+            console.log(listaAtualizada)
 
-        tableVitrineAdm.innerHTML = ""
+            Adm.elementoTabela.innerHTML = ""
 
-        listaProdutosPubli.forEach((elemento) => {
-            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
-            elemento.nome, elemento.descricao, elemento.id, elemento.preco)
-            trProduto.criarTemplate(tableVitrineAdm)
-        })
-        
-        
-        return response
-        
+           listaAtualizada.forEach((elemento) => {
+                const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+                elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+                trProduto.criarTemplate(Adm.elementoTabela)
+            })
+
+            if(response.id){
+                console.log('tem id')
+            }
+            else{
+
+                console.log('nao tem id')
+            }
+
+            inputModAddNome.value = ''     
+            inputModAddDesc.value = '' 
+            inputModAddValor.value = '' 
+            inputModAddUrl.value = '' 
+            
+            categoria = ''
+
+            btnPaniCatAdd.style.backgroundColor = '#F8F9FA'
+            btnPaniCatAdd.style.color = '#868E96'
+            btnFrutCatAdd.style.backgroundColor = '#F8F9FA'
+            btnFrutCatAdd.style.color = '#868E96'
+            btnBebCatAdd.style.backgroundColor = '#F8F9FA'
+            btnBebCatAdd.style.color = '#868E96'
+
+            modalAdicionar.style.display = 'none'
     })
 })
+
