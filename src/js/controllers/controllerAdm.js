@@ -164,8 +164,6 @@ const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
         }
         
         const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)            
-                
-        //console.log(response)
 
         let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
             console.log(listaAtualizada)
