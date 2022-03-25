@@ -694,6 +694,15 @@ button:hover{
     font-size: 14px;
 }
 
+.vitrineAdm-produtos-listar-td-2-header{
+    width: 150px;
+
+}
+
+.vitrineAdm-produtos-listar-td-4-header{
+    width: 290px;
+}
+
 .vitrineAdm-produtos-listar-td{
     width: 250px;
     display: flex;
@@ -714,7 +723,7 @@ button:hover{
     width: 32px;
     height: 32px;
     border-radius: 150px;
-    margin: 0 auto;
+    margin: 0 10px;
 }
 .divCategoriaAdm{
     display: flex;
@@ -867,6 +876,10 @@ button:hover{
     border:1.5px solid #DEE2E6
 }
 
+.modalNomeDesc> #inputModEditNome:focus{
+    outline:0;
+}
+
 .modalNomeDesc> #inputModEditDesc {
     margin-top: 1%;
     margin-bottom: 3%;
@@ -877,6 +890,10 @@ button:hover{
     border:1.5px solid #DEE2E6
 }
 
+.modalNomeDesc> #inputModEditDesc:focus{
+    outline:0;
+}
+
 .modalBtnCateg {
     display: flex;
     flex-direction: column;
@@ -884,6 +901,7 @@ button:hover{
     width: 100%;
     height: 10%;
     margin-left: 20%;
+    margin-top: 10%;
     
 }
 .modalBtnCateg>h3 {
@@ -948,6 +966,11 @@ button:hover{
     border:1.5px solid #DEE2E6
 }
 
+.modalPrecoImg> #inputModEditValor:focus{
+    outline:0;
+}
+
+
 .modalPrecoImg> #inputModEditUrl {
     margin-top: 1%;
     margin-bottom: 3%;
@@ -957,6 +980,11 @@ button:hover{
     border-radius: 12px;
     border:1.5px solid #DEE2E6
 }
+
+.modalPrecoImg> #inputModEditUrl:focus{
+    outline:0;
+}
+
 
 #btnModSaveChanges{
     background: #FF2253;
@@ -1034,6 +1062,10 @@ button:hover{
     border:1.5px solid #DEE2E6
 }
 
+.modalNomeDesc> #inputModAddNome:focus{
+    outline:0;
+}
+
 .modalNomeDesc> #inputModAddDesc {
     margin-top: 1%;
     margin-bottom: 3%;
@@ -1042,6 +1074,9 @@ button:hover{
     background-color: #F8F9FA;
     border-radius: 12px;
     border:1.5px solid #DEE2E6
+}
+.modalNomeDesc> #inputModAddDesc:focus{
+    outline:0;
 }
 
 .modalPrecoImg> #inputModAddValor {
@@ -1053,6 +1088,9 @@ button:hover{
     border-radius: 12px;
     border:1.5px solid #DEE2E6
 }
+.modalPrecoImg> #inputModAddValor:focus{
+    outline:0;
+}
 
 .modalPrecoImg> #inputModAddUrl {
     margin-top: 1%;
@@ -1062,6 +1100,9 @@ button:hover{
     background-color: #F8F9FA;
     border-radius: 12px;
     border:1.5px solid #DEE2E6
+}
+.modalPrecoImg> #inputModAddUrl:focus{
+    outline:0;
 }
 
 #btnModSaveChangesAdd{
