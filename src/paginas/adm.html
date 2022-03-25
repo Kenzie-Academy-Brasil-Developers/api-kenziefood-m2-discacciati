@@ -40,24 +40,56 @@
         </div>
         <div class="modalNomeDesc">
             <h3>Nome do Produto</h3>
-            <input id="inputModEditNome" type="text">
+            <input id="inputModEditNome" type="text" placeholder="Digitar o nome">
             <h3>Descrição</h3>
-            <input id="inputModEditDesc" type="text">
+            <input id="inputModEditDesc" type="text" placeholder="Digitar a descrição">
         </div>
         <div class="modalBtnCateg">
             <h3>Categorias</h3>
-            <button id="btnPaniCat">Panificadora</button>
-            <button id="btnFrutCat">Frutas</button>
-            <button id="btnBebCat">Bebidas</button>
+            <div class="btnsCateg">
+                <button id="btnPaniCat">Panificadora</button>
+                <button id="btnFrutCat">Frutas</button>
+                <button id="btnBebCat">Bebidas</button>
+            </div>
         </div>
         <div class="modalPrecoImg">
             <h3>Valor do Produto</h3>
-            <input id="inputModEditValor" type="text">
+            <input id="inputModEditValor" type="number" placeholder="Digitar o valor aqui">
             <h3>Link da imagem</h3>
-            <input id="inputModEditUrl" type="url">
+            <input id="inputModEditUrl" type="url" placeholder="Inserir link">
         </div>
         <div class="footModEdicao">
-            <button>Salvar Alterações</button>
+            <button id="btnModSaveChanges">Salvar Alterações</button>
+        </div>
+    </div>
+
+    <div class="modalAdicionar">
+        <div class="headModAdicionar">
+            <h3>Cadastro de Produto</h3>
+            <button class="modalExitAdd">X</button>
+        </div>
+        <div class="modalNomeDesc">
+            <h3>Nome do Produto</h3>
+            <input id="inputModAddNome" type="text">
+            <h3>Descrição</h3>
+            <input id="inputModAddDesc" type="text">
+        </div>
+        <div class="modalBtnCateg">
+            <h3>Categorias</h3>
+            <div class="btnsCateg">
+                <button id="btnPaniCatAdd">Panificadora</button>
+                <button id="btnFrutCatAdd">Frutas</button>
+                <button id="btnBebCatAdd">Bebidas</button>
+            </div>
+        </div>
+        <div class="modalPrecoImg">
+            <h3>Valor do Produto</h3>
+            <input id="inputModAddValor" type="number">
+            <h3>Link da imagem</h3>
+            <input id="inputModAddUrl" type="url">
+        </div>
+        <div class="footModAdd">
+            <button id="btnModSaveChangesAdd">Cadastrar</button>
         </div>
     </div>
 

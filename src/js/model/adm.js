@@ -1,4 +1,5 @@
 import { API } from "./api.js"
+
 export class Adm {
     constructor(imgUrl, categoria, nomeProduto, descricao, idProduto, preco){
         this.imgUrl      = imgUrl
@@ -46,6 +47,7 @@ export class Adm {
     async handleEvent(event){
       
       const modalEdicao = document.querySelector('.modalEdicao')
+      const btnModSaveChanges = document.querySelector('#btnModSaveChanges')
 
         if(event.target.id === 'btnEditarAdm'){
 
@@ -53,6 +55,9 @@ export class Adm {
             const inputModEditDesc  = document.querySelector('#inputModEditDesc')
             const inputModEditValor = document.querySelector('#inputModEditValor')
             const inputModEditUrl   = document.querySelector('#inputModEditUrl')
+            const btnPaniCat        = document.querySelector('#btnPaniCat')
+            const btnFrutCat        = document.querySelector('#btnFrutCat')
+            const btnBebCat         = document.querySelector('#btnBebCat')
             
             Adm.produtoEdicao = {...this}
             inputModEditNome.value  = Adm.produtoEdicao.nomeProduto
@@ -60,6 +65,38 @@ export class Adm {
             inputModEditValor.value = Adm.produtoEdicao.preco
             inputModEditUrl.value   = Adm.produtoEdicao.imgUrl
 
+            btnPaniCat.addEventListener('click', () =>{
+                btnPaniCat.style.background = '#FF2253'
+                btnPaniCat.style.color = '#F8F9FA'
+
+                Adm.produtoEdicao.categoria = 'Panificadora'
+                console.log(Adm.produtoEdicao)
+            })
+            btnFrutCat.addEventListener('click', () =>{
+                btnFrutCat.style.background = '#FF2253' 
+                btnFrutCat.style.color = '#F8F9FA'
+
+                Adm.produtoEdicao.categoria = 'Frutas'
+            })
+            btnBebCat.addEventListener('click', () =>{
+                btnBebCat.style.background = '#FF2253' 
+                btnBebCat.style.color = '#F8F9FA'
+
+                Adm.produtoEdicao.categoria = 'Bebidas'
+            })
+
+            if(Adm.produtoEdicao.categoria === 'Panificadora'){
+                btnPaniCat.style.background = '#FF2253' 
+                btnPaniCat.style.color = '#F8F9FA'
+            }
+            if(Adm.produtoEdicao.categoria === 'Frutas'){
+                btnFrutCat.style.background = '#FF2253' 
+                btnFrutCat.style.color = '#F8F9FA'
+            }
+            if(Adm.produtoEdicao.categoria === 'Bebidas'){
+                btnBebCat.style.background = '#FF2253' 
+                btnBebCat.style.color = '#F8F9FA'
+            }
 
             console.log(Adm.produtoEdicao)
 
@@ -70,6 +107,33 @@ export class Adm {
         const modalExit = document.querySelector('.modalExit')
         modalExit.addEventListener('click', () =>{
             modalEdicao.style.display = 'none'
+        })
+
+        btnModSaveChanges.addEventListener('click', async function () {
+            
+            const dadosProduto = {
+            nome: inputModEditNome.value,
+            descricao: inputModEditDesc.value,
+            preco: inputModEditValor.value,
+            imgem: inputModEditUrl.value,
+            categoria: Adm.produtoEdicao.categoria
+            }
+
+            modalEdicao.style.display = 'none'
+
+            /*const response = await API.atualizarProduto(API.infoUsuario.token,dadosProduto, Adm.produtoEdicao.idProduto)*/
+
+            Adm.tableVitrineAdm.innerHTML = ""
+
+            Adm.listaProdutosPubli.forEach((elemento) => {
+                const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+                elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+                trProduto.criarTemplate(tableVitrineAdm)
+            })
+
+            /*return response*/
+
+            
         })
       
       
