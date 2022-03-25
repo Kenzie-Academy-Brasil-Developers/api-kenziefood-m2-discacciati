@@ -5,8 +5,7 @@ import{ CardProduto } from "./cards.js"
 
 const produtosNoCarrinho = document.querySelector(".vitrineCarrinho-Listar")
 const qtdCarrinho   = document.querySelector(".divQuantidadeCarrinho")
-const totalProdutos = document.querySelector(".divTotalCarrinho")
-// produtosNoCarrinho.addEventListener("click", CardCarrinho.removerProduto())
+
 
 export class CardCarrinho{
     constructor(imgUrl, categoria, nomeProduto, preco, idProduto){
@@ -69,19 +68,21 @@ export class CardCarrinho{
             }
         })
 
+        console.log(produto)
+        localStorage.setItem('carrinhoKF-g1pedro', JSON.stringify(produto))
+
         this.quantidadeCarrinho()
 
         this.somaTotal()
     }
 
     quantidadeCarrinho(){
-        return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
+        return qtdCarrinho.innerHTML = `<div>Quantidade</div> <div>${produto.length}<div>`
     }
 
     somaTotal(){
         const total = document.querySelector('.divTotalCarrinho')
-
-        total.innerText = produto.reduce((a, b) => {
+        total.innerHTML = produto.reduce((a, b) => {
             a += b.preco
 
             return a;

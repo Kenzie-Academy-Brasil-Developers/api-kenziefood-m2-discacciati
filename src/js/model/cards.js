@@ -36,27 +36,36 @@ export class CardProduto{
     }
 
     handleEvent(){
-        ulCarrinho.innerHTML = ""
-        produto.push(listaProdutosPubli.filter((elemento) => {
-            return elemento.id === this.idProduto   
-        })[0])
-        produto.forEach((elemento)=>{
-            if(elemento.id == elemento.id){
-                const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
-                liCarrinho.templateCarrinho(ulCarrinho)
-            }
-        })
-        this.quantidadeCarrinho()
-        this.somaTotal()
+        const target = event.target
+        if(target.tagName == "BUTTON"){
+            ulCarrinho.innerHTML = ""
+            const targetLI = target.closest("li").id
+
+            produto.push(listaProdutosPubli.filter((elemento) => {
+                return elemento.id === this.idProduto   
+            })[0])
+            produto.forEach((elemento)=>{
+               
+                    const liCarrinho = new CardCarrinho(elemento.imagem, elemento.categoria, elemento.nome, elemento.preco, elemento.id)
+                    liCarrinho.templateCarrinho(ulCarrinho)
+                
+            })
+          localStorage.setItem('carrinhoKF-g1pedro', JSON.stringify(produto))
+
+           CardProduto.quantidadeCarrinho()
+           CardProduto.somaTotal()
+        }
+        
+
     }
-    quantidadeCarrinho(){
-        return qtdCarrinho.innerHTML = `Quantidade ${produto.length}`
+    static quantidadeCarrinho(){
+        return qtdCarrinho.innerHTML = `<div>Quantidade</div> <div>${produto.length}</div>`
     }
-    somaTotal(){
+    static somaTotal(){
         let soma = 0
         produto.map((elemento) =>{
             soma += elemento.preco
-            return  totalProdutos.innerHTML = `Total R$:  ${soma.toFixed(2)}`  
+            return  totalProdutos.innerHTML = `<div>Total</div> <div>R$:  ${soma.toFixed(2)}</div>`  
         })
     }
 
