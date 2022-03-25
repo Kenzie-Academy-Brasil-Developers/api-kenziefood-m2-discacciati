@@ -15,8 +15,7 @@ if(armazenamentoLocal){
 const login  = document.querySelector('.btnLogin')
 const logout = document.querySelector('#logoutHome')
 
-if(localStorage.getItem('tokenKF-G1Pedro')){
-    API.infoUsuario.token = localStorage.getItem('tokenKF-G1Pedro')
+if(API.infoUsuario.token){
     login.innerText = "Editar"
     login.style.backgroundColor = "green"
     logout.style.display = 'block'

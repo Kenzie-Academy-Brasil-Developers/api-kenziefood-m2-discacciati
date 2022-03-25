@@ -3,7 +3,7 @@ export class API{
     static ROTA = "https://kenzie-food-api.herokuapp.com"
 
     static infoUsuario = {
-        token:"",
+        token: localStorage.getItem('tokenKF-G1Pedro'),
         informaçoes: {}
     }
 
@@ -30,7 +30,7 @@ export class API{
             "body": JSON.stringify(dados)
         })            
 
-        return response
+        return response.json()
     }
 
     static async listarProdutosPublico(){
