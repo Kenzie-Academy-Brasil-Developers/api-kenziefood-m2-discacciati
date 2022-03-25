@@ -51,20 +51,6 @@ inputBuscar.addEventListener('keyup', ()=>{
 })
 //-----------------------------------------------------------
 
-// ----------- Adicionar Produto ------------------
-
-/* const btnAdicionarProduto = document.querySelector('.btn adicionarProduto')
-btnAdicionarProduto.addEventListener('click', (event)=>{
-    modalLogin.style.display = "flex"
-    botaoModalLogin.addEventListener("click", ()=> {
-         modalLogin.style.display = "none"
-            location.reload()
-
-
-
-}) */
-
-
 
 
 //-------------------Filtros-------------------------
