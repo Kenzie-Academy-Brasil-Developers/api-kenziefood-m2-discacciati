@@ -113,7 +113,7 @@ export class Adm {
             nome: inputModEditNome.value,
             descricao: inputModEditDesc.value,
             preco: inputModEditValor.value,
-            imgem: inputModEditUrl.value,
+            imagem: inputModEditUrl.value,
             categoria: Adm.produtoEdicao.categoria
             }
 
@@ -148,7 +148,7 @@ export class Adm {
                 
                     if( event.target.classList.value =="btn-divAdm-Deletar"){
                       const apiExcluir = await API.excluirProduto(API.infoUsuario.token, Adm.produtoExclusao)
-                      console.log(apiExcluir)
+                      console.log(apiExcluir.status)
 
                         Adm.elementoTabela.innerHTML = ""
 
