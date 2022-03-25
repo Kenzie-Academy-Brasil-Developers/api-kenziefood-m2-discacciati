@@ -11,7 +11,7 @@ const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 // Listar Produtos no Adm
 listaProdutosPubli.forEach((elemento) => {
     const trProduto = new Adm(elemento.imagem, elemento.categoria, 
-    elemento.nome, elemento.descricao, elemento.id)
+    elemento.nome, elemento.descricao, elemento.id, elemento.preco)
     trProduto.criarTemplate(tableVitrineAdm)
 })
 
@@ -117,4 +117,74 @@ const btnLogout = document.querySelector('.btnLogout')
 btnLogout.addEventListener('click', ()=>{
     localStorage.removeItem('tokenKF-G1Pedro')
     location.assign('./../../index.html')
+})
+//--------------------------------------------------------------------------
+
+const btnAdicionarProduto = document.querySelector('.adicionarProduto')
+const modalAdicionar = document.querySelector('.modalAdicionar')
+
+btnAdicionarProduto.addEventListener('click', () => {
+    
+    const inputModAddNome      = document.querySelector('#inputModAddNome')
+    const inputModAddDesc      = document.querySelector('#inputModAddDesc')
+    const inputModAddValor     = document.querySelector('#inputModAddValor')
+    const inputModAddUrl       = document.querySelector('#inputModAddUrl')
+    const btnPaniCatAdd        = document.querySelector('#btnPaniCatAdd')
+    const btnFrutCatAdd        = document.querySelector('#btnFrutCatAdd')
+    const btnBebCatAdd         = document.querySelector('#btnBebCatAdd')
+
+    let categoria = ''
+
+    btnPaniCatAdd.addEventListener('click', () =>{
+        btnPaniCatAdd.style.background = '#FF2253'
+        btnPaniCatAdd.style.color = '#F8F9FA'
+
+        categoria = 'Panificadora'
+    })
+    btnFrutCatAdd.addEventListener('click', () =>{
+        btnFrutCatAdd.style.background = '#FF2253' 
+        btnFrutCatAdd.style.color = '#F8F9FA'
+
+        categoria = 'Frutas'
+    })
+    btnBebCatAdd.addEventListener('click', () =>{
+        btnBebCatAdd.style.background = '#FF2253' 
+        btnBebCatAdd.style.color = '#F8F9FA'
+
+        categoria = 'Bebidas'
+    })
+    
+    modalAdicionar.style.display = 'flex'
+
+    const modalExitAdd = document.querySelector('.modalExitAdd')
+    modalExitAdd.addEventListener('click', () => {
+        modalAdicionar.style.display = 'none'
+    })
+
+    const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
+    btnModSaveChangesAdd.addEventListener('click', async function () {
+        const dadosProduto = {
+            nome: inputModAddNome.value,
+            preco: Number(inputModAddValor.value),
+            categoria: categoria,
+            imagem: inputModAddUrl.value,
+            descricao: inputModAddDesc.value  
+        }
+        
+        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)
+
+        modalAdicionar.style.display = 'none'
+
+        tableVitrineAdm.innerHTML = ""
+
+        listaProdutosPubli.forEach((elemento) => {
+            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+            elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+            trProduto.criarTemplate(tableVitrineAdm)
+        })
+        
+        
+        return response
+
+    })
 })
