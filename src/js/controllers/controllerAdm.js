@@ -161,8 +161,26 @@ btnAdicionarProduto.addEventListener('click', () => {
                 
         console.log(response)
 
-        location.reload()
+        let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
+            console.log(listaAtualizada)
 
+            Adm.elementoTabela.innerHTML = ""
+
+           listaAtualizada.forEach((elemento) => {
+                const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+                elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+                trProduto.criarTemplate(Adm.elementoTabela)
+            })
+
+            if(response.id){
+                console.log('tem id')
+            }
+            else{
+
+                console.log('nao tem id')
+            }
+
+            modalAdicionar.style.display = 'none'
     })
 })
 
