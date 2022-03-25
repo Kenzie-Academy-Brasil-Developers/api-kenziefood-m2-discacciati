@@ -1285,6 +1285,71 @@ button:hover{
     border:none;
 }
 
+/*------- Modal Status Adicionar ------*/
+.divAdm-Status-Add-Sucesso{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 300px;
+    margin-bottom: -40px;
+    font-size: 14px;
+    margin-left: -300px;
+    padding: 10px;
+    margin-top: 400px;
+} 
+
+.divAdm-Status-Add-Erro{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 300px;
+    margin-bottom: -40px;
+    font-size: 14px;
+    margin-left: -300px;
+    padding: 10px;
+    margin-top: 400px;
+}
+
+.divAdm-Status-Add-Header{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 30px;
+    background: #F8F9FA;
+    align-items: center;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.divAdm-Status-Add-Corpo-Sucesso{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+    font-size: 13px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-bottom: 5px solid #39DF8F;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.divAdm-Status-Add-Corpo-Erro{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+    font-size: 13px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-bottom: 5px solid #FF2253;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 /* -------- Media Query -------*/
 @media(min-width: 426px){
     body{
