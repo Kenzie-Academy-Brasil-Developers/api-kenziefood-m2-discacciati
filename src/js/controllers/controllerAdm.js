@@ -171,6 +171,6 @@ btnAdicionarProduto.addEventListener('click', () => {
         
         
         return response
-
+        
     })
 })
