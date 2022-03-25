@@ -52,6 +52,7 @@ export class API{
         const response = await fetch(`${API.ROTA}/my/products`, {
             "method": "GET",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },            
         })            
@@ -64,12 +65,15 @@ export class API{
         const response = await fetch(`${API.ROTA}/my/products`, {
             "method": "POST",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },
             "body": JSON.stringify(dadosProduto)
-        })    
+        }) 
 
-        return response.json()
+        const responseJson = await response.json()
+        
+        return responseJson
     }
 
     static async atualizarProduto(token, dadosProduto, idProduto){
@@ -77,6 +81,7 @@ export class API{
         const response = await fetch(`${API.ROTA}/my/products/${idProduto}`, {
             "method": "PATCH",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },
             "body": JSON.stringify(dadosProduto)
@@ -90,11 +95,12 @@ export class API{
         const response = await fetch(`${API.ROTA}/my/products/${idProduto}`, {
             "method": "DELETE",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },
         })    
 
-        return response.json()
+        return response
     }
 
     static async listarProdutosNoCarrinho(token){
@@ -102,6 +108,7 @@ export class API{
         const response = await fetch(`${API.ROTA}/cart`, {
             "method": "GET",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },
         })    
@@ -116,6 +123,7 @@ export class API{
             const response = await fetch(`${API.ROTA}/cart`, {
                 "method": "POST",
                 "headers": {
+                    "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                             },
                 "body":JSON.stringify({
@@ -132,6 +140,7 @@ export class API{
             const response = await fetch(`${API.ROTA}/cart`, {
                 "method": "POST",
                 "headers": {
+                    "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                             },
                 "body":JSON.stringify({
@@ -150,6 +159,7 @@ export class API{
         const response = await fetch(`${API.ROTA}/cart/remove/${idProduto}`, {
             "method": "DELETE",
             "headers": {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
                         },
         })    

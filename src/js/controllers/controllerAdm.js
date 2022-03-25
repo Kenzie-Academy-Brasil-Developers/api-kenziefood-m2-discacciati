@@ -2,10 +2,10 @@ import { API } from "../model/api.js";
 import { Adm } from "../model/adm.js";
 
 
-const listaProdutosPubli = await API.listarProdutosPublico()
+const listaProdutosPubli = await API.listarProdutosPorToken(API.infoUsuario.token)
 console.log(listaProdutosPubli)
 
-const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
+export const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
 
 // Listar Produtos no Adm
@@ -108,47 +108,53 @@ btnLogout.addEventListener('click', ()=>{
 
 const btnAdicionarProduto = document.querySelector('.adicionarProduto')
 const modalAdicionar = document.querySelector('.modalAdicionar')
+let categoria = ''
 
-btnAdicionarProduto.addEventListener('click', () => {
+btnAdicionarProduto.addEventListener('click', ()=>{
+
+    modalAdicionar.style.display = 'flex'    
     
-    const inputModAddNome      = document.querySelector('#inputModAddNome')
-    const inputModAddDesc      = document.querySelector('#inputModAddDesc')
-    const inputModAddValor     = document.querySelector('#inputModAddValor')
-    const inputModAddUrl       = document.querySelector('#inputModAddUrl')
     const btnPaniCatAdd        = document.querySelector('#btnPaniCatAdd')
     const btnFrutCatAdd        = document.querySelector('#btnFrutCatAdd')
     const btnBebCatAdd         = document.querySelector('#btnBebCatAdd')
+    
 
-    let categoria = ''
-
-    btnPaniCatAdd.addEventListener('click', () =>{
+    btnPaniCatAdd.addEventListener('click', ()=>{
         btnPaniCatAdd.style.background = '#FF2253'
         btnPaniCatAdd.style.color = '#F8F9FA'
 
         categoria = 'Panificadora'
     })
-    btnFrutCatAdd.addEventListener('click', () =>{
+    btnFrutCatAdd.addEventListener('click', ()=>{
         btnFrutCatAdd.style.background = '#FF2253' 
         btnFrutCatAdd.style.color = '#F8F9FA'
 
         categoria = 'Frutas'
     })
-    btnBebCatAdd.addEventListener('click', () =>{
+    btnBebCatAdd.addEventListener('click', ()=>{
         btnBebCatAdd.style.background = '#FF2253' 
         btnBebCatAdd.style.color = '#F8F9FA'
 
         categoria = 'Bebidas'
     })
-    
-    modalAdicionar.style.display = 'flex'
+      
 
     const modalExitAdd = document.querySelector('.modalExitAdd')
-    modalExitAdd.addEventListener('click', () => {
+    modalExitAdd.addEventListener('click', ()=>{
         modalAdicionar.style.display = 'none'
     })
 
-    const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
+    
+})
+
+const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
     btnModSaveChangesAdd.addEventListener('click', async function () {
+
+        const inputModAddNome      = document.querySelector('#inputModAddNome')
+        const inputModAddDesc      = document.querySelector('#inputModAddDesc')
+        const inputModAddValor     = document.querySelector('#inputModAddValor')
+        const inputModAddUrl       = document.querySelector('#inputModAddUrl')
+
         const dadosProduto = {
             nome: inputModAddNome.value,
             preco: Number(inputModAddValor.value),
@@ -157,20 +163,41 @@ btnAdicionarProduto.addEventListener('click', () => {
             descricao: inputModAddDesc.value  
         }
         
-        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)
+        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)            
 
-        modalAdicionar.style.display = 'none'
+        let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
+            console.log(listaAtualizada)
 
-        tableVitrineAdm.innerHTML = ""
+            Adm.elementoTabela.innerHTML = ""
 
-        listaProdutosPubli.forEach((elemento) => {
-            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
-            elemento.nome, elemento.descricao, elemento.id, elemento.preco)
-            trProduto.criarTemplate(tableVitrineAdm)
-        })
-        
-        
-        return response
+           listaAtualizada.forEach((elemento) => {
+                const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+                elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+                trProduto.criarTemplate(Adm.elementoTabela)
+            })
 
+            if(response.id){
+                console.log('tem id')
+            }
+            else{
+
+                console.log('nao tem id')
+            }
+
+            inputModAddNome.value = ''     
+            inputModAddDesc.value = '' 
+            inputModAddValor.value = '' 
+            inputModAddUrl.value = '' 
+            
+            categoria = ''
+
+            btnPaniCatAdd.style.backgroundColor = '#F8F9FA'
+            btnPaniCatAdd.style.color = '#868E96'
+            btnFrutCatAdd.style.backgroundColor = '#F8F9FA'
+            btnFrutCatAdd.style.color = '#868E96'
+            btnBebCatAdd.style.backgroundColor = '#F8F9FA'
+            btnBebCatAdd.style.color = '#868E96'
+
+            modalAdicionar.style.display = 'none'
     })
-})
+

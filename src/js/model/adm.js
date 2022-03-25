@@ -1,4 +1,5 @@
 import { API } from "./api.js"
+import { tableVitrineAdm } from "../controllers/controllerAdm.js"
 
 export class Adm {
     constructor(imgUrl, categoria, nomeProduto, descricao, idProduto, preco){
@@ -14,9 +15,9 @@ export class Adm {
         this.trAdm.addEventListener("click", this) //Assim o js procura o handleEvent
     }
 
+    static elementoTabela = document.querySelector('.vitrineAdm-produtos')
 
-    static produtoExclusao
-  
+    static produtoExclusao  
     static produtoEdicao = {}
 
 
@@ -98,9 +99,6 @@ export class Adm {
                 btnBebCat.style.color = '#F8F9FA'
             }
 
-            console.log(Adm.produtoEdicao)
-
-
             modalEdicao.style.display = 'flex'
         }
 
@@ -115,25 +113,27 @@ export class Adm {
             nome: inputModEditNome.value,
             descricao: inputModEditDesc.value,
             preco: inputModEditValor.value,
-            imgem: inputModEditUrl.value,
+            imagem: inputModEditUrl.value,
             categoria: Adm.produtoEdicao.categoria
             }
 
             modalEdicao.style.display = 'none'
+          
+            const response = await API.atualizarProduto(API.infoUsuario.token,dadosProduto, Adm.produtoEdicao.idProduto)
 
-            /*const response = await API.atualizarProduto(API.infoUsuario.token,dadosProduto, Adm.produtoEdicao.idProduto)*/
+            //console.log(response)           
 
-            Adm.tableVitrineAdm.innerHTML = ""
+            let listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
+            //console.log(listaAtualizada)
 
-            Adm.listaProdutosPubli.forEach((elemento) => {
+            Adm.elementoTabela.innerHTML = ""
+
+           listaAtualizada.forEach((elemento) => {
                 const trProduto = new Adm(elemento.imagem, elemento.categoria, 
                 elemento.nome, elemento.descricao, elemento.id, elemento.preco)
-                trProduto.criarTemplate(tableVitrineAdm)
+                trProduto.criarTemplate(Adm.elementoTabela)
             })
-
-            /*return response*/
-
-            
+                                  
         })
       
       
@@ -142,15 +142,29 @@ export class Adm {
            Adm.deletarPost(elementoPai) 
            Adm.produtoExclusao = this.idProduto
             
+           const elementoFilho = document.querySelector(".divAdm-DeletarPost")
             const btnDeletarConfirm = document.querySelector('.divAdm-DeletarPost')
-            btnDeletarConfirm.addEventListener('click', (event)=>{
-                console.log(event.target.classList.value)
+            btnDeletarConfirm.addEventListener('click', async function(event){
+                
                     if( event.target.classList.value =="btn-divAdm-Deletar"){
-                      const apiExcluir = API.excluirProduto(API.infoUsuario.token, Adm.produtoExclusao)
+                      const apiExcluir = await API.excluirProduto(API.infoUsuario.token, Adm.produtoExclusao)
+                      console.log(apiExcluir.status)
+
+                        Adm.elementoTabela.innerHTML = ""
+
+                        const listaAtualizada = await API.listarProdutosPorToken(API.infoUsuario.token)
+
+                        listaAtualizada.forEach((elemento) => {
+                            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+                            elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+                            trProduto.criarTemplate(Adm.elementoTabela)
+                        })
+
+                      elementoPai.removeChild(elementoFilho)
+
                     }
-                    else if( event.target.classList.value =="btn-divAdm-Deletar-Fechar" || event.target.classList.value =="btn-divAdm-Deletar-Fechar-2"){
-                        const elementoPai = document.querySelector('#divsAdm')
-                        const elementoFilho = document.querySelector(".divAdm-DeletarPost")
+                    else if( event.target.classList.value =="btn-divAdm-Deletar-Fechar" || event.target.classList.value =="btn-divAdm-Deletar-Fechar-2"){    
+
                         elementoPai.removeChild(elementoFilho)
                     }
             })

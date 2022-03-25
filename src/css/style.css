@@ -157,6 +157,7 @@ h4{
 .mainVitrine{
     display: flex;
     padding: 20px;
+    margin-bottom: 150px;
 }
 .vitrineCardapio{
     display: flex;

@@ -81,7 +81,7 @@ export class CardCarrinho{
     }
 
     somaTotal(){
-        const total = document.querySelector('.divTotalCarrinho')
+        const total = document.querySelector('.asideDivTotal')
         total.innerHTML = produto.reduce((a, b) => {
             a += b.preco
 
