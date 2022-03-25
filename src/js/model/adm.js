@@ -113,7 +113,7 @@ export class Adm {
             nome: inputModEditNome.value,
             descricao: inputModEditDesc.value,
             preco: inputModEditValor.value,
-            imgem: inputModEditUrl.value,
+            imagem: inputModEditUrl.value,
             categoria: Adm.produtoEdicao.categoria
             }
 

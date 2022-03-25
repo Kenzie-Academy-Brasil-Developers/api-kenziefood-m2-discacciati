@@ -149,6 +149,7 @@ btnAdicionarProduto.addEventListener('click', () => {
 
     const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
     btnModSaveChangesAdd.addEventListener('click', async function () {
+        
         const dadosProduto = {
             nome: inputModAddNome.value,
             preco: Number(inputModAddValor.value),
@@ -179,6 +180,20 @@ btnAdicionarProduto.addEventListener('click', () => {
 
                 console.log('nao tem id')
             }
+
+            inputModAddNome.value = ''     
+            inputModAddDesc.value = '' 
+            inputModAddValor.value = '' 
+            inputModAddUrl.value = '' 
+            
+            categoria = ''
+
+            btnPaniCatAdd.style.backgroundColor = '#F8F9FA'
+            btnPaniCatAdd.style.color = '#868E96'
+            btnFrutCatAdd.style.backgroundColor = '#F8F9FA'
+            btnFrutCatAdd.style.color = '#868E96'
+            btnBebCatAdd.style.backgroundColor = '#F8F9FA'
+            btnBebCatAdd.style.color = '#868E96'
 
             modalAdicionar.style.display = 'none'
     })

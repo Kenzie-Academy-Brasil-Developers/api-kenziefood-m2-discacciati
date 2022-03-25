@@ -70,8 +70,10 @@ export class API{
                         },
             "body": JSON.stringify(dadosProduto)
         }) 
+
+        const responseJson = await response.json()
         
-        return response.json()
+        return responseJson
     }
 
     static async atualizarProduto(token, dadosProduto, idProduto){
