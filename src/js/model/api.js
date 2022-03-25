@@ -28,9 +28,16 @@ export class API{
                 "Content-Type": "application/json"
                         },
             "body": JSON.stringify(dados)
-        })            
+        })   
+        
+        const resposta = await response.json()
 
-        return response.json()
+        if(response.status == 200){
+             localStorage.setItem('tokenKF-G1Pedro', resposta)
+        }
+        
+
+        return response
     }
 
     static async listarProdutosPublico(){

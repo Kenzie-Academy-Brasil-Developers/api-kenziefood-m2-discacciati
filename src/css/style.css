@@ -640,7 +640,6 @@ button:hover{
 /* ---------------- Página Adm ----------------*/
 
 .mainAdm{
-    width: 600px;
     display: flex;
     padding: 20px;
     margin: 0 auto;
@@ -1100,9 +1099,23 @@ button:hover{
     -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
     box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
+.divAdm-DeletarHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    height: 25px;
+    background: #F8F9FA;
+    border-radius: 8px 8px 0px 0px;
 
-
-
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
 .divAdm-DeletarCorpo{
     display: flex;
     justify-content: center;
@@ -1179,7 +1192,6 @@ button:hover{
     line-height: 20px;
     color: #000000;
     border:none;
-
 }
 
 /* -------- Media Query -------*/
