@@ -220,4 +220,47 @@ export class Adm {
         return arrayResult        
     }
     
+
+
+//------------------- modais de Status Adicionar ------------
+
+    static statusAdicionarSucesso(elementoPai){
+        const divStatusAdcionarSucesso = document.createElement("div")
+        divStatusAdcionarSucesso.className= "divAdm-Status-Add-Sucesso"
+        divStatusAdcionarSucesso.innerHTML = `
+            <div class="divAdm-Status-Add-Header">
+                <div>
+                    <span>Status</span>
+                </div>
+                <div>
+                    <button class="btn-divAdm-Deletar-Fechar-2">X</button>
+                </div>
+                </div>
+                <div class="divAdm-Status-Add-Corpo-Sucesso">
+                <p class="divAdm-Deletar-texto">Produto adicionado com sucesso</p>
+                
+        `
+        elementoPai.appendChild(divStatusAdcionarSucesso)
+    }
+
+
+    static statusAdicionarErro(elementoPai){
+        const divStatusAdcionarErro = document.createElement("div")
+        divStatusAdcionarErro.className = "divAdm-Status-Add-Erro"
+        divStatusAdcionarErro.innerHTML = `
+        <div class="divAdm-Status-Add-Header">
+                <div>
+                    <span>Status</span>
+                </div>
+                <div>
+                    <button class="btn-divAdm-Deletar-Fechar-2">X</button>
+                </div>
+                </div>
+                <div class="divAdm-Status-Add-Corpo-Erro">
+                <p class="divAdm-Deletar-texto">Ocorreu algum erro, o produto não foi adicionado</p>
+                </div>
+        `
+        elementoPai.appendChild(divStatusAdcionarErro)
+    }
+
 }

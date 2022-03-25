@@ -178,10 +178,20 @@ const btnModSaveChangesAdd = document.querySelector('#btnModSaveChangesAdd')
 
             if(response.id){
                 console.log('tem id')
+                const elementoPai = document.querySelector('#divsAdm')
+                Adm.statusAdicionarSucesso(elementoPai)
+                const fechar = setTimeout(()=>{
+                    const filho = document.querySelector('.divAdm-Status-Add-Sucesso')
+                    elementoPai.removeChild(filho)
+                }, 4000)
             }
             else{
-
-                console.log('nao tem id')
+                const elementoPai = document.querySelector('#divsAdm')
+                Adm.statusAdicionarErro(elementoPai)
+                const fechar = setTimeout(()=>{
+                    const filho = document.querySelector('.divAdm-Status-Add-Erro')
+                    elementoPai.removeChild(filho)
+                }, 4000)
             }
 
             inputModAddNome.value = ''     
