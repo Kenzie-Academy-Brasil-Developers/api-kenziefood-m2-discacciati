@@ -65,7 +65,7 @@ export class CardProduto{
         let soma = 0
         produto.map((elemento) =>{
             soma += elemento.preco
-            return  totalProdutos.innerHTML = `<div>Total</div> <div>R$:  ${soma.toFixed(2)}</div>`  
+            return  totalProdutos.innerHTML = `<div>Total</div> <div class="asideDivTotal">R$:  ${soma.toFixed(2)}</div>`  
         })
     }
 
