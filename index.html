@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <header class="headerVitrine">
+        <div class="nomeDoRestaurante">
+            <img class="imgHeader" src="./src/img/headerKenzie.png" alt="">
+        </div>
+        <div class="divBuscar">
+            
+            <div class="inputEBtn">
+                
+                    <div class="divInputEBtn">
+                        <input class="inputBuscar" type="search" placeholder="pesquisar por produto">
+                        <button class="btnPesquisar" type="submit">&#128269;</button>
+                    </div>
+                    <div class="divBtnLoginLogOut">
+                        <button class="btnLogin">Entrar</button>
+                        <button class="btnLogout" id="logoutHome">Sair</button>
+                    </div>
+            </div>   
+        </div>
+    </header>
+    <nav class="categorias">
+        <ul class="listaDeBusca">
+            <li><button class="btn pesquisarTodos" name="Todos">Todos</button></li>
+            <li class="liFiltro"><button class="btn pesquisarPanificadora"><img class="imgPaes" src="./src/img/pao1.jpg" alt="">Panificadora</button></li>
+            <li class="liFiltro"><button class="btn pesquisarFrutas"> <img class="imgFrutas" src="./src/img/frutas.png" alt=""> Frutas</button></li>
+            <li class="liFiltro"><button class="btn pesquisarBebidas"> <img class="imgBebidas" src="./src/img/vinho1.jpg" alt=""> Bebidas</button></li>
+        </ul>
+    </nav>
+        
+    <main class="mainVitrine">
+        <section class="vitrineCardapio">
+            <ul class="vitrineCardapio-produtos"> </ul>
+                
+        </section>
+        <aside class="asideCarrinho">
+            <header class="headerCarrinho">
+                <h3>Carrinho</h3>
+                <span class="ocultarCarrinho">X</span>
+            </header>
+            <section class="vitrineCarrinho">
+                <ul class="vitrineCarrinho-Listar" ></ul>
+
+                
+            </section>
+            <div class="divQuantidadeCarrinho">
+               
+            </div>
+            <div class="divTotalCarrinho">
+                
+            </div>
+
+            <div class="divFinalizarCompra">
+                <button class="btnFinalizarCompra">Finalizar Compra</button>
+            </div>
+        </aside>
+            <div>
+                <button class="btnCarrinhoMobile">Carrinho</button>
+            </div>
+    </main>
+
+    
+    <script type="module" src="./src/js/controllers/script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>KenzieFood Cadastro</title>
+</head>
+<body>
+    
+    <div class="modalErroCadastro">
+  
+        <div class="containerModalContent">
+          
+            <div class="modalHeader">
+                <h2>Status</h2>
+                <button class="botaoModalErroCadastro">X</button>
+            </div>
+          
+            <div class="modalContent">
+                <p>Usuário já existente.</p>
+            </div>
+        
+            <div class="modalErroFooter"></div>
+
+        </div>  
+      
+    </div>
+
+    <div class="modalConfirmacaoCadastro">
+  
+        <div class="containerModalContent">
+          
+            <div class="modalHeader">
+                <h2>Status</h2>
+                <button class="botaoModalConfirmacaoCadastro">X</button>
+            </div>
+
+            <div class="modalContent">
+                <p>Cadastro feito com sucesso.</p>
+            </div>
+          
+            <div class="modalConfirmaFooter"></div>
+        
+        </div>  
+      
+    </div>
+
+    <section class="containerFormCadastro">
+
+        <img class="logoCadastro" src="../img/headerKenzie.png" alt="logoKenzieFood">
+        <h2 class="tituloCadastro">Cadastro</h2>
+
+        <form class="formularioCadastro" action="">
+            <input id="nomeCadastro" name="nomeCadastro" type="text" placeholder="Nome">
+            <input id="emailCadastro" name="emailCadastro" type="email" placeholder="Email">
+            <input id="senhaCadastro" name="senhaCadastro" type="password" placeholder="Senha">
+            <button id="buttonCadastro">Cadastrar</button>
+        </form>
+
+        <div class="loginCadastro">
+            <span>Se já possui cadastro clique <a href="./login.html">aqui</a>.</span>
+        </div>
+
+    </section>
+
+    <script type="module" src="../js/controllers/controllerRegistro.js"></script>
+</body>
+</html>

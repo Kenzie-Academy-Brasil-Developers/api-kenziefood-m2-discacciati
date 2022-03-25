@@ -1,0 +1,1416 @@
+/*--------- Home -------- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+body{
+    width: 425px;
+    font-family: "poppins";
+    font-weight: 500;
+}
+.headerVitrine{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
+}
+.nomeDoRestaurante{
+    display: flex;
+    align-items: baseline;
+}
+.vitrineCardapio-produtos{
+    display: flex;
+    list-style: none;
+    padding: 1px;
+    align-items: center;
+}
+h3{
+    font-size: 28px;
+    padding: 2px;
+}
+h4{
+    font-size: 20px;
+    color: #FF2253;
+    padding: 2px;
+}
+.inputEBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputEBtn > div{
+    padding: 2px;
+}
+.divInputEBtn{
+    display: flex;
+}
+.divBtnLoginLogOut{
+    display: flex;
+}
+.divBuscar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    max-width: 191px;
+}
+.inputBuscar{
+    background-color: #E9ECEF;
+    border-radius: 25px;
+    width: 100%;
+    border: 1px solid #E9ECEF;
+    height: 28px;
+    padding: 8px;
+}
+
+.inputBuscar:focus{
+    outline:0;
+}
+.btnPesquisar{
+    border: none;
+    background-color: #f5c3cd;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 1;
+    right: 0;
+    border-radius: 25px;
+    /* margin-right: 150px;
+    margin-top: 2px; */
+}
+.categorias{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.listaDeBusca{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-around;
+}
+.liFiltro{
+    display: flex;
+}
+.btn{
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 15px;
+    background-color: #F3EEF5;
+    border: none;
+    font-weight: 500;
+}
+.imgPaes{
+    width: 18px;
+    height: 8px;
+    padding: 0px 10px 0px 5px;
+}
+.imgFrutas{
+    width: 20px;
+    height: 12px;
+}
+.imgBebidas{
+    padding: 0px 2px 0px 2px;
+    width: 10px;
+    height: 15px;
+}
+.btnFiltros{
+    display: flex;
+}
+.pesquisarPanificadora{
+    background-color: #FFF7F4;
+
+}
+.pesquisarFrutas{
+    background-color: #FFF1F4;
+}
+.pesquisarBebidas{
+    display: flex;
+    align-items: center;
+}
+.pesquisarTodos{
+    width: 88px;
+    background-color: #FF2253;
+    color: #FFF;
+}
+.adicionarProduto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    background-color: #FF2253;
+}
+.btn-p-adicionarProduto{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #F8F9FA;
+}
+
+.mainVitrine{
+    display: flex;
+    padding: 20px;
+}
+.vitrineCardapio{
+    display: flex;
+    width: 100%;
+}
+.divPreco{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.asideCarrinho{
+    display: none;
+    position: fixed;
+    width: 30%;
+    background-color: white;
+    top: 11vh;
+    left: 19px;
+    width: 386px;
+      
+}
+.divFinalizarCompra{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btnFinalizarCompra{
+    background-color: #FF2253;
+    color: #FFF;
+    border-radius: 5px;
+    height: 30px;
+    font: "Poppins";
+    font-weight: 700;
+    border: none;
+}
+.btnCarrinhoMobile{
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1px;
+    line-height: 28px;
+    color: #FFFFFF;
+    height: 60px;
+    background: #FF2253;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.headerCarrinho{
+    width: 100%;
+    color: #FFF;
+    background-color: #FF2253;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.ocultarCarrinho{
+    margin-right: 13px;
+}
+
+.headerCarrinho > h3{
+    font-size:16px;
+    height: 40px;
+    line-height: 40px;
+}
+.imgHeaderCarrinho{
+    width: 15px;
+    height: 15px;
+}
+.carrinhoListar{
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: row;
+}
+.vitrineCardapio-produtos{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineCardapio-produtos-listar{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+}
+.vitrineCardapio-produtos-listar > p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+    line-height: 14px;
+}
+.h2Cardapio{
+    font-family: "poppins";
+    font-weight: 500;
+    padding: 5px 0px 0px 0px;
+    /* height: 37px; */
+}
+.preco{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+}
+.categoriaTemplateCardapiro{
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #868E96;
+}
+.imgCardapio{
+    max-width: 338px;
+    max-height: 224px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.imgHeader{
+    width: 50%;
+    padding-left: 20px;
+}
+.imgCarrinho{
+    width: 40%;
+    height: 80px;
+    max-width: 138px;
+}
+.imgLixoCarrinho{
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+    /* border-radius: 15px; */
+}
+.carrinhoListar > h2, .preco{
+    font-size: 12px;
+}
+.carrinhoListar > p{
+    font-size: 10px;
+}
+.imgCart{
+    width: 10px;
+    height: 10px;
+}
+.btnAddCarrinho img{
+    pointer-events: none;
+} 
+
+.btnAddCarrinho{ 
+    border: none;
+    border-radius: 25px;
+    
+}
+.divQuantidadeCarrinho{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+}
+.divQuantidadeCarrinho> div{
+    padding: 0px 5px 0px 5px;
+}
+.divTotalCarrinho{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.divTotalCarrinho > div{
+    padding: 0px 5px 0px 5px;
+}
+.vitrineCarrinho{
+    overflow: auto;
+    max-height: 60vh;
+}
+
+
+.vitrineCarrinho-Listar{
+    display: flex;
+    flex-direction: column
+}
+.botaoExcluirCarrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F8F9FA;
+}
+.divOrdenarCarrinho{
+    display: flex;
+    flex-direction: column;
+}
+.divOrdenarCarrinho {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.btnLogin{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+.btnLogout{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FF2253;
+    color: white;
+}
+
+#logoutHome{
+    display: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+.pDaFinalizacao{
+    width: 70%;
+    font-size: 52px;
+    padding: 20px 20px 20px 66px;
+}
+
+/*-------------------- Página login.html -------------------- */
+.containerFormLogin{
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    margin-top: 12vh;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.logoLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.tituloLogin {
+    text-align: center;
+    padding-top: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.formularioLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+.formularioLogin>input {
+    width: 70%;
+    height: 10%;
+    margin-top: 15%;
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 12px;
+
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.formularioLogin>input:focus{
+    outline:0;
+}
+
+.formularioLogin>button {
+    width: 70%;
+    height: 10%;
+    margin-top: 15%;
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    border-radius: 12px;
+
+    color: #F8F9FA;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.cadastroLogin{
+    width: 80%;
+    margin-left: 10%;
+}
+
+
+/*Modais*/
+.modalErroLogin {
+    display: none;
+    width: 90%;
+    height: 10%;
+    position: fixed;
+    top: 35%;
+    left: 5%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.containerModalContent {
+    width: 100%;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+    background-color: #F8F9FA;
+    border-radius: 12px 12px 0px 0px;
+}
+.modalHeader>h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 15px;
+}
+.modalHeader>button {
+    background-color: #E9ECEF;
+    border-radius: 4px;
+    border: 1.5px solid #E9ECEF;
+    margin-right: 15px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+}
+
+.modalContent>p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+    margin-left: 20px;
+}
+.modalErroFooter {
+    height: 10%;
+    background-color: #FF2253;
+    border-radius: 0px 0px 12px 12px;
+}
+
+/* -------------------- Página registro.html -------------------- */ 
+.containerFormCadastro {
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    margin-top: 8vh;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.logoCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.tituloCadastro {
+    text-align: center;
+    padding-top: 5%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.formularioCadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+.formularioCadastro>input {
+    width: 70%;
+    height: 10%;
+    margin-top: 15%;
+    background-color: #E9ECEF;
+    border: 1.5px solid #E9ECEF;
+    border-radius: 12px;
+
+    color: #868E96;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.formularioCadastro>input:focus{
+    outline:0;
+}
+
+.formularioCadastro>button {
+    width: 70%;
+    height: 10%;
+    margin-top: 15%;
+    background-color: #FF2253;
+    border: 1.5px solid #FF2253;
+    border-radius: 12px;
+
+    color: #F8F9FA;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.loginCadastro {
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*Modais*/
+.modalErroCadastro {
+    display: none;
+    width: 85%;
+    height: 10%;
+    position: fixed;
+    top: 25%;
+    left: 7.5%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+.modalConfirmacaoCadastro {
+    display: none;
+    width: 85%;
+    height: 10%;
+    position: fixed;
+    top: 25%;
+    left: 7.5%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+.modalConfirmaFooter {
+    height: 10%;
+    background-color: #39DF8F;
+    border-radius: 0px 0px 12px 12px;
+}
+
+
+/* ---------------- Página Adm ----------------*/
+
+.mainAdm{
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+}
+.vitrineAdm{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.vitrineAdm-produtos-header{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineAdm-produtos{
+    display: flex;
+    flex-direction: column;
+}
+.vitrineAdm-produtos-listar{
+    display: flex;
+    width: 100%;
+    height: 62px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid #E9ECEF;  
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+.vitrineAdm-produtos-listar-header{
+    display: flex;
+    width: 98%;
+    height: 62px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+}
+
+.vitrineAdm-produtos-listar-header-p{
+    color: #868E96;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+}
+
+.vitrineAdm-produtos-listar-td{
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+.h2Adm{
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0px 0px 0px;
+    color: #212529;
+}
+.imgAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+.divCategoriaAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+.divCategoriaAdmBtn{
+    width: 93px;
+    height: 27px;
+    background: #F8F9FA;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #868E96;
+}
+.block-with-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #868E96;
+
+    white-space: nowrap;
+    width: 25em;
+    overflow: hidden;
+    text-overflow: ellipsis;     
+    text-align: justify;
+}
+
+.divAcaoAdm{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5px;
+}
+.btnEditarAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    border: none;
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
+}
+.btnExcluirAdm{
+    width: 32px;
+    height: 32px;
+    border-radius: 150px;
+    border: none;
+    background: #F8F9FA;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    color: #868E96;
+}
+
+.imgAdmAcao{
+    height: 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+
+.vitrineAdm-produtos-listar-td-2{
+    width:250px;
+}
+
+.modalEdicao {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 30vw;
+    height: 70vh;
+    align-items: center;
+    top: 15%;
+    left: 35%;
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 12px 12px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.headModEdicao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #F8F9FA;
+    border-radius: 12px 12px 0px 0px;
+    height: 10%;
+}
+
+.headModEdicao>h3 {
+    margin-right: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.headModEdicao>.modalExit {
+    border: none;
+    background-color:#E9ECEF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+}
+
+.modalNomeDesc {
+  align-items: flex-start;
+    width: 100%;
+    height: 20vh;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.modalNomeDesc>h3 {
+    margin-right: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.modalNomeDesc> #inputModEditNome {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalNomeDesc> #inputModEditDesc {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 80px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalBtnCateg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 10%;
+    margin-left: 20%;
+    
+}
+.modalBtnCateg>h3 {
+    margin-right: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 2%;
+} 
+
+.btnsCateg{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+}
+
+.btnsCateg > button{
+    width: 30%;
+    border: none;
+    border-radius: 12px;
+    height: 4vh;
+    color: #868E96;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.modalPrecoImg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 20vh;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.modalPrecoImg>h3 {
+    margin-right: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.modalPrecoImg> #inputModEditValor {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalPrecoImg> #inputModEditUrl {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+#btnModSaveChanges{
+    background: #FF2253;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  padding: 15px 20px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F8F9FA;
+}
+
+.modalAdicionar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 30vw;
+    height: 70vh;
+    align-items: center;
+    top: 15%;
+    left: 35%;
+    background-color: #FFFFFF;
+    border-radius: 12px 12px 12px 12px;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+
+.headModAdicionar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #F8F9FA;
+    border-radius: 12px 12px 0px 0px;
+    height: 10%;
+}
+
+.headModAdicionar>h3 {
+    margin-right: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.headModAdicionar>.modalExitAdd {
+    border: none;
+    background-color:#E9ECEF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+}
+
+.modalNomeDesc> #inputModAddNome {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalNomeDesc> #inputModAddDesc {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 80px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalPrecoImg> #inputModAddValor {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+.modalPrecoImg> #inputModAddUrl {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    width: 77%;
+    height: 52px;
+    background-color: #F8F9FA;
+    border-radius: 12px;
+    border:1.5px solid #DEE2E6
+}
+
+#btnModSaveChangesAdd{
+    background: #FF2253;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F8F9FA;
+}
+
+/* ------ Modal ADM Exclusão -------*/
+.divAdm-DeletarPost{
+    border-radius: 8px ;
+    background: #FFFFFF;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    top: 52px;
+    left: 25%;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
+}
+.divAdm-DeletarHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    height: 25px;
+    background: #F8F9FA;
+    border-radius: 8px 8px 0px 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+.divAdm-DeletarCorpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #000000;
+}
+.divAdm-DeletarBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding: 15px 20px;
+    height: 52px;
+}
+.btn-divAdm-Deletar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: 30px;
+    width: 90px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #868E96;
+}
+
+.btn-divAdm-Deletar-Fechar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    height: 30px;
+    width: 90px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #868E96;
+}
+
+.btn-divAdm-Deletar-Fechar-2{
+    background: #E9ECEF;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    border:none;
+}
+
+/* -------- Media Query -------*/
+@media(min-width: 426px){
+    body{
+        width: 768px;
+    }
+    .listaDeBusca{
+        width: 70%; 
+    }
+    .pesquisarTodos{
+        margin: 0px 0px 0px 20px;
+    }
+    .divBuscar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        /* width: 25%; */
+    }
+    .btnPesquisar{
+        margin-right: 20px;
+        margin-top: 2px;
+    }
+    .mainVitrine{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+    }
+    .vitrineCardapio{
+        width: 70%;
+    }
+    .vitrineCardapio-produtos{
+        display: flex;
+        flex-direction: row;
+        align-content:flex-start;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+    }
+    .vitrineCardapio-produtos-listar{
+        padding: 5px;
+        width: 40%;
+        display: flex;
+    }
+    .vitrineCardapio-produtos-listar > p{
+        height: 80px;
+    }
+    .vitrineCardapio-produtos-listar > span{
+        margin-top: 20px;
+    }
+    .asideCarrinho{
+
+        display: block;
+        position: static;
+        bottom: auto;
+        transform: translateY(0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+
+    .ocultarCarrinho{
+        display: none;
+    }
+
+    .vitrineCarrinho{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .vitrineCarrinho-Listar{
+        display: flex;
+        padding: 10px;
+    }
+    /*--- Login.html ---*/
+    .containerFormLogin {
+        width: 45%;       
+    }
+    .modalErroLogin {
+        width: 50%;
+        top: 35%;
+        left: 25%; 
+    }
+    /*--- Registro.html ---*/
+    .containerFormCadastro {
+        width: 45%;
+    }
+    .modalErroCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
+    .modalConfirmacaoCadastro {
+        width: 50%;
+        top: 35%;
+        left: 25%;
+    }
+
+    .btnCarrinhoMobile{
+        display: none;
+    }
+
+}
+    @media(min-width: 769px){
+        body{
+            width: 100%;
+        }
+        .divBuscar{
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* width: 19%; */
+        }
+        .categorias{
+            width: 60%;
+        }
+        .vitrineCarrinho{
+            display: flex;
+        }
+        .vitrineCardapio-produtos-listar{
+            width: 28%;
+        }
+
+        .imgCarrinho{
+            width: 100%;
+            max-width: 121px;
+        }
+        /*--- Login.html ---*/
+        .containerFormLogin {
+            width: 35%;    
+
+        }
+
+        .formularioLogin>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonCadastro {
+            margin-top: 8.5%;
+        }
+
+
+        .formularioLogin>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonCadastro {
+            margin-top: 8.5%;
+        }
+
+
+        .cadastroLogin {
+            margin-top: -10.5%;
+            margin-left: 20%;
+        }
+
+        .modalErroLogin {
+            width: 45%;
+            top: 35%;
+            left: 27.5%; 
+        }
+        /*--- Registro.html ---*/
+        .containerFormCadastro {
+            width: 35%;
+            height: 80vh;
+
+        }
+
+        .formularioCadastro>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonLogin {
+            margin-top: 8.5%;
+        }
+        
+        .loginCadastro {
+            margin-top: -6%;
+            margin-left: 20%;
+        }
+
+
+        
+
+        .formularioCadastro>input {
+            margin-top: 8.5%;
+        }
+
+        #buttonLogin {
+            margin-top: 8.5%;
+        }
+        
+        .loginCadastro {
+            margin-top: -6%;
+            margin-left: 20%;
+        }
+
+
+        .modalErroCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
+        }
+        .modalConfirmacaoCadastro {
+            width: 45%;
+            top: 35%;
+            left: 27.5%;
+        }
+
+        .asideCarrinho{
+            display: block;
+            position: static;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        
+        .ocultarCarrinho{
+            display: none;
+        }
+   }
+

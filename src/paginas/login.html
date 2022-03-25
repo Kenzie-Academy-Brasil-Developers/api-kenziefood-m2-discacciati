@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>KenzieFood Login</title>
+
+</head>
+<body>
+
+  <div class="modalErroLogin">
+  
+    <div class="containerModalContent">
+      
+      <div class="modalHeader">
+        <h2>Status</h2>
+        <button class="botaoModalErroLogin">X</button>
+      </div>
+
+      <div class="modalContent">
+        <p>Usuário ou senha incorreta</p>
+      </div>
+
+      <div class="modalErroFooter"></div>
+
+    </div>  
+  
+  </div>
+
+  <section class="containerFormLogin">
+
+    <img class= "logoLogin" src="../img/headerKenzie.png" alt="logoKenzieFood">
+    <h2 class="tituloLogin">Login</h2>
+    
+    <form class="formularioLogin" action="">
+        
+        <input id="userLogin" name="userLogin" type="email" placeholder="Email do Usuário">
+        <input id="senhaLogin" name="senhaLogin" type="password" placeholder="Senha">
+        <button id="buttonLogin">Entrar</button>
+
+    </form>
+
+    <div class="cadastroLogin">
+      <span>Se não tem cadastro clique <a href="./registro.html">aqui</a>.</span>
+    </div>
+
+  </section>
+
+  <script type="module" src="../js/controllers/controllerLogin.js"></script>
+</body>
+</html>
