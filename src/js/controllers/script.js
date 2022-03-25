@@ -33,7 +33,16 @@ login.addEventListener('click',()=>{
 //---------------------------------------------
 
 
-const listaProdutosPubli = await API.listarProdutosPublico()
+let listaProdutosPubli = await API.listarProdutosPublico()
+
+console.log(API.infoUsuario.token)
+
+if(API.infoUsuario.token){
+    let listaProdutosDoUsuario = await API.listarProdutosPorToken(API.infoUsuario.token)
+    console.log(listaProdutosDoUsuario)
+    listaProdutosPubli = listaProdutosPubli.concat(listaProdutosDoUsuario)
+}
+
 console.log(listaProdutosPubli)
 
 const ulCardapio = document.querySelector(".vitrineCardapio-produtos")

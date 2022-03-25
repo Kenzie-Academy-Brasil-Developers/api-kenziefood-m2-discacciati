@@ -2,10 +2,10 @@ import { API } from "../model/api.js";
 import { Adm } from "../model/adm.js";
 
 
-const listaProdutosPubli = await API.listarProdutosPublico()
+const listaProdutosPubli = await API.listarProdutosPorToken(API.infoUsuario.token)
 console.log(listaProdutosPubli)
 
-const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
+export const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
 
 // Listar Produtos no Adm
@@ -157,20 +157,12 @@ btnAdicionarProduto.addEventListener('click', () => {
             descricao: inputModAddDesc.value  
         }
         
-        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)
+        const response = await API.criarProduto(API.infoUsuario.token, dadosProduto)            
+                
+        console.log(response)
 
-        modalAdicionar.style.display = 'none'
-
-        tableVitrineAdm.innerHTML = ""
-
-        listaProdutosPubli.forEach((elemento) => {
-            const trProduto = new Adm(elemento.imagem, elemento.categoria, 
-            elemento.nome, elemento.descricao, elemento.id, elemento.preco)
-            trProduto.criarTemplate(tableVitrineAdm)
-        })
-        
-        
-        return response
+        location.reload()
 
     })
 })
+
