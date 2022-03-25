@@ -140,11 +140,7 @@ export class Adm {
         if( event.target.id == "btnExcluirAdm"){
            const elementoPai = document.querySelector('#divsAdm')
            Adm.deletarPost(elementoPai) 
-           const body = document.querySelector('body')
-           const header = document.querySelector('.headerVitrine')
-            body.style.background = 'rgba(0, 0, 0, 0.5)'
-            header.style.background = 'rgba(0, 0, 0, 0)'
-            Adm.produtoExclusao = this.idProduto
+           Adm.produtoExclusao = this.idProduto
             
             const btnDeletarConfirm = document.querySelector('.divAdm-DeletarPost')
             btnDeletarConfirm.addEventListener('click', (event)=>{
@@ -155,8 +151,6 @@ export class Adm {
                     else if( event.target.classList.value =="btn-divAdm-Deletar-Fechar" || event.target.classList.value =="btn-divAdm-Deletar-Fechar-2"){
                         const elementoPai = document.querySelector('#divsAdm')
                         const elementoFilho = document.querySelector(".divAdm-DeletarPost")
-                        body.style.background = 'none';
-                        header.style.background = 'none';
                         elementoPai.removeChild(elementoFilho)
                     }
             })

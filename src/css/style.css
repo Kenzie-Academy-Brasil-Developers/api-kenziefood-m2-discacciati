@@ -640,6 +640,7 @@ button:hover{
 /* ---------------- Página Adm ----------------*/
 
 .mainAdm{
+    width: 600px;
     display: flex;
     padding: 20px;
     margin: 0 auto;
@@ -782,9 +783,7 @@ button:hover{
     line-height: 14px;
     color: #868E96;
 }
-:focus{
-    outline:0;
-}
+
 .imgAdmAcao{
     height: 20px;
     border-radius: 150px;
@@ -1098,6 +1097,8 @@ button:hover{
     position: fixed;
     top: 52px;
     left: 25%;
+    -webkit-box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73); 
+    box-shadow: 1px 2px 21px -5px rgba(0,0,0,0.73);
 }
 
 
