@@ -5,10 +5,19 @@ import { Adm } from "../model/adm.js";
 const listaProdutosPubli = await API.listarProdutosPorToken(API.infoUsuario.token)
 console.log(listaProdutosPubli)
 
+const listaProdutosPublicos = await API.listarProdutosPublico()
+console.log(listaProdutosPublicos)
+
 export const tableVitrineAdm = document.querySelector(".vitrineAdm-produtos")
 
+// listar Produtos Publicos
+listaProdutosPublicos.forEach((elemento) => {
+    const trProduto = new Adm(elemento.imagem, elemento.categoria, 
+    elemento.nome, elemento.descricao, elemento.id, elemento.preco)
+    trProduto.criarTemplate(tableVitrineAdm)
+})
 
-// Listar Produtos no Adm
+// Listar Produtos por Token no Adm
 listaProdutosPubli.forEach((elemento) => {
     const trProduto = new Adm(elemento.imagem, elemento.categoria, 
     elemento.nome, elemento.descricao, elemento.id, elemento.preco)
