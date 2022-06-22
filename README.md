@@ -19,9 +19,9 @@ Este é um Capstone Project realizado no segundo módulo do curso de Desenvolved
 
 ## 2. Links Relevantes
 
-- <a name="deploy-vercel" href="https://" target="_blank">Deploy @ Vercel</a>
-- <a name="doc-api" href="https://gitlab.com/-/snippets/2274944" target="_blank">Documentação da API</a> 
-- <a name="doc-api" href="https://kenzie-food-api.herokuapp.com/" target="_blank">Link da API</a> 
+- <a name="deploy-vercel" href="https://api-kenziefood-m2-discacciati.vercel.app/" target="_blank">Deploy @ Vercel</a>
+- <a name="doc-api" href="https://gitlab.com/-/snippets/2274944" target="_blank">Documentação da API</a>
+- <a name="doc-api" href="https://kenzie-food-api.herokuapp.com/" target="_blank">Link da API</a>
 - <a name="figma" href="https://www.figma.com/file/yCesx2slm3unVtyVW5d3RK/M2---E-commerce-Produtos---Kenzie-Food?node-id=1564%3A2548" target="_blank">Layout do Figma</a>
 
 <a name="regras"></a>
@@ -58,7 +58,6 @@ Autenticação do usuário salva no LocalStorage.
 . Produtos Adicionados ao carrinho inicialmente no localStorage, caso efetue o extra, adicionar na API;
 . Acesso total a página de criação, edição e remoção de produtos.
 
-
 <a name="techs"></a>
 
 ## 4. Tecnologias
@@ -69,18 +68,14 @@ Autenticação do usuário salva no LocalStorage.
 - <a name="context-api" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming" target="_blank">Object Oriented Programming (OOP)</a>
 - <a name="axios" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
 
-
-
 <a name="features"></a>
 
 ## 5. Funcionalidades
 
-Possui uma página principal(home) de apresentação de todas as comidas disponíveis para compra e um carrinho de compras que o usuário poderá incluir ou excluir as comidas escolhidas. Esta página possui um cabeçalho (header) com a logo da Kenzie Food a direita e a esquerda uma barra de pesquisa para busca por nome dos produtos. Logo abaixo possui uma barra de navegação com botões para Filtrar a exibição dos produtos. Os produtos podem ser exibidos/filtrados em: Todos ou pelas categorias de: Panificadora, Frutas e Bebidas. Abaixo da Barra de Navegação tem o corpo da página (main) com cards dos produtos. Cada produto pode ser exibido dentro de um card, contendo Foto, Categoria, Nome, Descrição e Preço do Produto e um botão de adicionar ao carrinho. 
+Possui uma página principal(home) de apresentação de todas as comidas disponíveis para compra e um carrinho de compras que o usuário poderá incluir ou excluir as comidas escolhidas. Esta página possui um cabeçalho (header) com a logo da Kenzie Food a direita e a esquerda uma barra de pesquisa para busca por nome dos produtos. Logo abaixo possui uma barra de navegação com botões para Filtrar a exibição dos produtos. Os produtos podem ser exibidos/filtrados em: Todos ou pelas categorias de: Panificadora, Frutas e Bebidas. Abaixo da Barra de Navegação tem o corpo da página (main) com cards dos produtos. Cada produto pode ser exibido dentro de um card, contendo Foto, Categoria, Nome, Descrição e Preço do Produto e um botão de adicionar ao carrinho.
 
-Na lateral direita da página possui o Carrinho de Compras, que lista os produtos adicionados, com foto, nome, categoria e preço de cada produto, e botão para excluir o produto do carrinho.   Ao final do carrinho possui a quantidade de itens do carrinho, cálculo do valor total da compra, e um botão para finalizar a compra que pode ser linkado à uma nova API de vendas online. 
+Na lateral direita da página possui o Carrinho de Compras, que lista os produtos adicionados, com foto, nome, categoria e preço de cada produto, e botão para excluir o produto do carrinho. Ao final do carrinho possui a quantidade de itens do carrinho, cálculo do valor total da compra, e um botão para finalizar a compra que pode ser linkado à uma nova API de vendas online.
 
 A página inicial também possui um botão para login, que leva para outra página específica onde o usuário poderá fazer um login com nome e senha, ou acessar como anonimo. E um botão para registro de um novo usuário. Após efetuar o login, o usuário tem acesso a página de administração do e-commerce. Esta tem a funcionalidade de incluir novo produto, editar um produto ou excluir um produto.
 
- ##
- 
-
+##
